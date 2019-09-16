@@ -14,6 +14,8 @@ import RowCrollDemo03 from './RowCroll/RowCrollDemo03'
 
 import CheckBoxDemo01 from './CheckBox/CheckBoxDemo01'
 
+import ReduxDemo01 from './Redux/ReduxDemo01'
+
 const Example = {
   StateHook01,
   StateHook02,
@@ -27,6 +29,7 @@ const Example = {
   RowCrollDemo02,
   RowCrollDemo03,
   CheckBoxDemo01,
+  ReduxDemo01,
 }
 
 export default Example

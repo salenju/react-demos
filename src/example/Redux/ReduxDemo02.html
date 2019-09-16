@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ReduxDemo02</title>
+</head>
+
+<body>
+  <script>
+
+    const plan = (state, action) => {
+      /**
+       * @param {Object}  state  现在的state
+       * @param {Object}  action  操作类型，必须有一个type属性
+       * */
+      switch (action.type) {
+        case 'INCREMENT':
+          return {
+            ...state,
+            count: state.count + 1
+          }
+          break;
+        case '':
+          return {
+            ...state,
+            count: state.count - 1
+          }
+          break;
+        default:
+          return state
+      }
+    }
+
+    // 手动实现状态管理
+    const createStore = (plan, initState) => {
+      let state = initState
+      let listeners = []
+
+      // 订阅
+      function subscribe(listener) {
+        listeners.push(listener)
+      }
+
+      function changeState(action) {
+        state = plan(state, action)
+        // 通知
+        for (let i = 0; i < listeners.length; i++) {
+          const listener = listeners[i]
+          listener()
+        }
+      }
+
+      function getState() {
+        return state
+      }
+
+      return {
+        subscribe,
+        changeState,
+        getState
+      }
+    }
+
+    let initState = {
+      count: 0
+    }
+
+    let store = createStore(plan, initState)
+
+    store.subscribe(() => {
+      let state = store.getState()
+      console.log(`${state.count}`)
+    })
+
+    // 自增
+    store.changeState({
+      type: 'INCREMENT'
+    })
+
+    // 自减
+    store.changeState({
+      type: 'DECREMENT'
+    })
+
+    // 随意修改
+    store.changeState({
+      count: 'acd'
+    })
+  </script>
+</body>
+
+</html>
