@@ -65,47 +65,38 @@
 
     // combineReducers函数实现原理
     const combineReducers = (reducers) => {
-      
-    }
 
+      /* reducerKeys = ['counter', 'info']*/
+      const reducerKeys = Object.keys(reducers)
+
+      /*返回合并后的新的reducer函数*/
+      return function combination(state = {}, action) {
+        /*生成的新的state*/
+        const nextState = {}
+
+        /*遍历执行所有的reducers，整合成为一个新的state*/
+        for (let i = 0; i < reducerKeys.length; i++) {
+          const key = reducerKeys[i]
+          const reducer = reducers[key]
+          /*之前的 key 的 state*/
+          const previousStateForKey = state[key]
+          /*执行 分 reducer，获得新的state*/
+          const nextStateForKey = reducer(previousStateForKey, action)
+
+          nextState[key] = nextStateForKey
+        }
+        return nextState;
+      }
+    }
+    
     // 利用combineReducers函数将多个reducer函数合并成一个reducer函数
     const reducer = combineReducers({
       counter: counterReducer,
       info: InfoReducer
     })
 
-
-
-
-
-
-
-
-    const plan = (state, action) => {
-      /**
-       * @param {Object}  state  现在的state
-       * @param {Object}  action  操作类型，必须有一个type属性
-       * */
-      switch (action.type) {
-        case 'INCREMENT':
-          return {
-            ...state,
-            count: state.count + 1
-          }
-          break;
-        case '':
-          return {
-            ...state,
-            count: state.count - 1
-          }
-          break;
-        default:
-          return state
-      }
-    }
-
     // 手动实现状态管理
-    const createStore = (plan, initState) => {
+    const createStore = (reducer, initState) => {
       let state = initState
       let listeners = []
 
@@ -114,8 +105,8 @@
         listeners.push(listener)
       }
 
-      function changeState(action) {
-        state = plan(state, action)
+      function dispatch(action) {
+        state = reducer(state, action)
         // 通知
         for (let i = 0; i < listeners.length; i++) {
           const listener = listeners[i]
@@ -129,7 +120,7 @@
 
       return {
         subscribe,
-        changeState,
+        dispatch,
         getState
       }
     }
@@ -138,7 +129,7 @@
       count: 0
     }
 
-    let store = createStore(plan, initState)
+    let store = createStore(reducer, initState)
 
     store.subscribe(() => {
       let state = store.getState()
@@ -146,17 +137,17 @@
     })
 
     // 自增
-    store.changeState({
+    store.dispatch({
       type: 'INCREMENT'
     })
 
     // 自减
-    store.changeState({
+    store.dispatch({
       type: 'DECREMENT'
     })
 
     // 随意修改
-    store.changeState({
+    store.dispatch({
       count: 'acd'
     })
   </script>
