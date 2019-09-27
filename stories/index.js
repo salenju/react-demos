@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 
-import Example from '../src/example'
+import Example from '../src'
 
 const {
   StateHook01,
@@ -15,13 +15,19 @@ const {
   RowCrollDemo02,
   RowCrollDemo03,
   CheckBoxDemo01,
+  CallbackRef01,
+  CallbackRef02,
+  CustomTextInput,
+  AutoFocusTextInput,
+  Context01,
+  Link01,
 } = Example
 
-storiesOf('React-Hooks/StateHook', module)
+storiesOf('React-Hooks/useState', module)
   .add('StateHook01', () => <StateHook01 />)
   .add('StateHook02', () => <StateHook02 initCount={1} />)
 
-storiesOf('React-Hooks/EffectHook', module)
+storiesOf('React-Hooks/useEffect', module)
   .add('无需清除的effect', () => <EffectHook01 />)
   .add('需要清除的effect', () => <EffectHook02 />)
   .add('EffectHook03', () => <EffectHook03 />)
@@ -33,8 +39,17 @@ storiesOf('RowCroll', module)
   .add('-RowCroll-class', () => <RowCrollDemo02 height={200} speed={25} />)
   .add('-RowCroll-间歇滚动', () => <RowCrollDemo03 />)
 
-  storiesOf('CheckBox', module)
+storiesOf('CheckBox', module)
   .add('CheckBox', () => <CheckBoxDemo01 />)
 
-  storiesOf('Refs', module)
- 
+storiesOf('Refs', module)
+  .add('CallbackRef01', () => <CallbackRef01 />)
+  .add('CallbackRef02', () => <CallbackRef02 />)
+  .add('CustomTextInput', () => <CustomTextInput />)
+  .add('AutoFocusTextInput', () => <AutoFocusTextInput />)
+
+storiesOf('Context', module)
+  .add('Context01', () => <Context01 />)
+
+storiesOf('ReactRouter', module)
+  .add('Link01', () => <Link01 />)
