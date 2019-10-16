@@ -37,5 +37,8 @@
     "@babel/preset-react": "^7.0.0",
     "@storybook/react": "^5.1.9",
     "babel-loader": "^8.0.6"
+  },
+  "resolutions": {
+    "styled-components": "^3.3.3"
   }
 }
