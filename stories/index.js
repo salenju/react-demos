@@ -46,6 +46,3 @@ storiesOf('Context', module)
 
 storiesOf('ReactRouter', module)
   .add('Link01', () => <Link01 />)
-
-storiesOf('FormInput', module)
-  .add('FormInput01', () => <FormInput01 />)

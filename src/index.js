@@ -22,8 +22,6 @@ import AutoFocusTextInput from './Refs/AutoFocusTextInput'
 import Context01 from './Context/Context01'
 import Link01 from './ReactRouter/Link01'
 
-import FormInput01 from './FormInput/FormInput01'
-
 const Example = {
   StateHook01, StateHook02,
   EffectHook01, EffectHook02, EffectHook03, EffectHook04,
@@ -35,7 +33,6 @@ const Example = {
   AutoFocusTextInput,
   Context01,
   Link01,
-  FormInput01,
 }
 
 export default Example
