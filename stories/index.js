@@ -14,6 +14,7 @@ const {
   Context01,
   Link01,
   FormInput01,
+  Computed,
 } = Example
 
 storiesOf('React-Hooks/useState', module)
@@ -46,3 +47,6 @@ storiesOf('Context', module)
 
 storiesOf('ReactRouter', module)
   .add('Link01', () => <Link01 />)
+
+storiesOf('Mobx Demo', module)
+  .add('Computed', () => <Computed />)
