@@ -7,7 +7,7 @@ const Computed = observer(props => {
 
   return (
     <div>
-      <button onClick={() => actions.setName('Helen','Zhang')}>点击修改Name</button>
+      <button onClick={() => actions.asyncSetName('Helen','Zhang')}>点击修改Name</button>
     </div>
   )
 })

@@ -1,4 +1,4 @@
-import { observable, action, autorun } from 'mobx'
+import { observable, action, autorun, runInAction } from 'mobx'
 
 const store = observable({
   firstName: 'Salen',
@@ -14,10 +14,19 @@ const actions = {
     store.firstName = first;
     store.secoedName = second;
   }),
+
+  asyncSetName: action((first, second) => {
+    setTimeout(
+      runInAction(() => {
+        store.firstName = first;
+        store.secoedName = second;
+      })
+      , 1000);
+  }),
 }
 
 autorun(() => {
-  console.log('----->name:', store.firstName + store.secoedName);
+  console.log(`${Date.now()}----->name:`, store.firstName + store.secoedName);
 })
 
 const MobxStore = { store, actions }
