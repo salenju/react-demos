@@ -24,6 +24,8 @@ import Link01 from './ReactRouter/Link01'
 
 import Computed from './Mobx/Computed'
 
+import Cascader from './Cascader'
+
 const Example = {
   StateHook01, StateHook02,
   EffectHook01, EffectHook02, EffectHook03, EffectHook04,
@@ -36,6 +38,7 @@ const Example = {
   Context01,
   Link01,
   Computed,
+  Cascader,
 }
 
 export default Example

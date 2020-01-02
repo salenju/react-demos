@@ -15,6 +15,7 @@ const {
   Link01,
   FormInput01,
   Computed,
+  Cascader,
 } = Example
 
 storiesOf('React-Hooks/useState', module)
@@ -50,3 +51,6 @@ storiesOf('ReactRouter', module)
 
 storiesOf('Mobx Demo', module)
   .add('Computed', () => <Computed />)
+
+storiesOf('Cascader', module)
+  .add('Cascader', () => <Cascader />)
