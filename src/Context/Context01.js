@@ -1,41 +1,41 @@
-import React from 'react'
+import React from "react";
 
-const ThemeContext = React.createContext('light');
+const ThemeContext = React.createContext("light");
 
 class Context01 extends React.Component {
-
   render() {
     return (
-      <ThemeContext.Provider value='dark'>
+      <ThemeContext.Provider value="dark">
         <Toolbar />
       </ThemeContext.Provider>
-    )
+    );
   }
 }
 
-const Toolbar = (props) => {
+const Toolbar = props => {
   return (
     <div>
       <ThemeButton />
     </div>
-  )
-}
+  );
+};
 
-Const TestData = (props) => {
-  return(
-    <div>TestData</div>
-  )
-}
+const TestData = props => {
+  return <div>TestData</div>;
+};
 
 class ThemeButton extends React.Component {
   componentDidMount() {
-    console.log('====>>>', this.context)
+    console.log("====>>>", this.context);
   }
   render() {
     return (
-      <button theme={this.context} />
-    )
+      <div>
+        <TestData />
+        <button theme={this.context} />
+      </div>
+    );
   }
 }
 
-export default Context01
+export default Context01;
