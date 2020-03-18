@@ -18,7 +18,7 @@ const actions = {
   asyncSetName: action((first, second) => {
     setTimeout(
       runInAction(() => {
-        store.firstName = first 
+        store.firstName = first
         store.secoedName = second 
       }),
       1000
@@ -27,7 +27,7 @@ const actions = {
 } 
 
 autorun(() => {
-  console.log(`${Date.now()}----->name:`, store.firstName + store.secoedName) 
+    console.log(`${Date.now()}----->name:`, store.firstName + store.secoedName) 
 }) 
 
 const MobxStore = { store, actions } 
