@@ -1,8 +1,8 @@
-import { observable, action, autorun, runInAction } from 'mobx' 
+import { observable, action, autorun, runInAction } from "mobx" 
 
 const store = observable({
-  firstName: 'Salen',
-  secoedName: 'Ju'
+  firstName: "Salen",
+  secoedName: "Ju"
 }) 
 
 const actions = {
@@ -11,14 +11,14 @@ const actions = {
   }),
 
   setName: action((first, second) => {
-    store.firstName = first 
-    store.secoedName = second 
+    store.firstName = first
+    store.secoedName = second
   }),
 
   asyncSetName: action((first, second) => {
     setTimeout(
       runInAction(() => {
-        store.firstName = first
+        store.firstName = first 
         store.secoedName = second 
       }),
       1000
@@ -27,7 +27,8 @@ const actions = {
 } 
 
 autorun(() => {
-    console.log(`${Date.now()}----->name:`, store.firstName + store.secoedName) 
+  alert('Test')
+  console.log(`${Date.now()}----->name:`, store.firstName + store.secoedName) 
 }) 
 
 const MobxStore = { store, actions } 
