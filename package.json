@@ -23,7 +23,24 @@
     "storybook": "start-storybook -p 9008 -s public"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "parser": "babel-eslint",
+    "plugins": [
+      "jest"
+    ],
+    "extends": [
+      "standard",
+      "standard-react",
+      "prettier",
+      "plugin:jest/recommended"
+    ],
+    "env": {
+      "jest/globals": true,
+      "browser": true
+    }
+  },
+  "prettier": {
+    "singleQuote": true,
+    "semi": false
   },
   "browserslist": {
     "production": [
