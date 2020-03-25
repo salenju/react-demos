@@ -25,7 +25,6 @@ const actions = {
     ) 
   })
 } 
-
 autorun(() => {
   let c = 1
   let b = 2
