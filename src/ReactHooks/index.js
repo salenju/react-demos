@@ -7,6 +7,10 @@ import EffectHook02 from "./EffectHook/EffectHook02"
 import EffectHook03 from "./EffectHook/EffectHook03"
 import EffectHook04 from "./EffectHook/EffectHook04"
 
+import UseContext01 from "./UseContext/UseContext01"
+
+
+
 const ReactHooks = {
   StateHook01,
   StateHook02,
@@ -14,7 +18,8 @@ const ReactHooks = {
   ClassExample,
   EffectHook02,
   EffectHook03,
-  EffectHook04
+  EffectHook04,
+  UseContext01,
 };
 
 export default ReactHooks

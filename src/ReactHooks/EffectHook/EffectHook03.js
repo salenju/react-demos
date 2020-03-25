@@ -1,13 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react'
 
 const EffectHook03 = () => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0)
   const handleClick = () => {
-    setCount(count + 1);
-    setTimeout(() => {
-      console.log('====>>count:', count);
-    }, 1000);
+    setCount(count + 1)
   }
+
+  /**
+   * 1.当useEffect只有一个参数时：每次状态改变，useEffect都会解绑
+   * 2.当useEffect传入第二个参数：
+   *  - []——组件将被销毁时才会注销
+   *  - [变量1，变量2，...]——传入数组中的变量发生改变时就会注销
+   */
+
+  useEffect(() => {
+    console.log('====>1')
+    return () => {
+      console.log('=====>2')
+    }
+  }, [count])
 
   return (
     <div>

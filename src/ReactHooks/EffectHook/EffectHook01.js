@@ -15,6 +15,7 @@ const EffectHook01 = () => {
    */
   useEffect(() => {
     document.title = `You clicked ${count} times`;
+    console.log('=====>')
   })
 
   return (

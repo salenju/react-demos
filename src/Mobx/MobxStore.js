@@ -28,7 +28,6 @@ const actions = {
 autorun(() => {
   let c = 1
   let b = 2
-  b == c
   console.log(`${Date.now()}----->name:`, store.firstName + store.secoedName) 
 }) 
 
