@@ -11,6 +11,7 @@ const {
   EffectHook03,
   EffectHook04,
   UseContext01,
+  UseReducer01,
 } = ReactHooks
 
 storiesOf('React-Hooks/useState', module)
@@ -23,7 +24,10 @@ storiesOf('React-Hooks/useEffect', module)
   .add('EffectHook03', () => <EffectHook03 />)
   .add('EffectHook04', () => <EffectHook04 />)
 
-storiesOf('React-Hooks/useContext', module)
-.add('UseContext01', () => (
+storiesOf('React-Hooks/useContext', module).add('UseContext01', () => (
   <UseContext01 />
+))
+
+storiesOf('React-Hooks/UseReducer', module).add('UseReducer01', () => (
+  <UseReducer01 />
 ))
