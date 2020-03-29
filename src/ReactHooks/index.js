@@ -10,6 +10,7 @@ import EffectHook04 from "./EffectHook/EffectHook04"
 import UseContext01 from "./UseContext/UseContext01"
 
 import UseReducer01 from './UseReducer/UseReducer01'
+import UseReducer02 from './UseReducer/UseReducer02'
 
 const ReactHooks = {
   StateHook01,
@@ -21,6 +22,7 @@ const ReactHooks = {
   EffectHook04,
   UseContext01,
   UseReducer01,
+  UseReducer02,
 };
 
 export default ReactHooks
