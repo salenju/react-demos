@@ -31,4 +31,4 @@ storiesOf('React-Hooks/useContext', module).add('UseContext01', () => (
 
 storiesOf('React-Hooks/UseReducer', module)
   .add('UseReducer01', () => <UseReducer01 />)
-  .add('UseReducer01', () => <UseReducer02 />)
+  .add('UseReducer02', () => <UseReducer02 />)

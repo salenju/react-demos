@@ -1,7 +1,18 @@
-import React, { createContext } from 'react'
+import React, { createContext, useReducer } from 'react'
 
 // 创建ColorContext
-export const ColorContext = createContext()
+export const ColorContext = createContext({})
+
+export const UPDATE_COLOR = 'UPDATE_COLOR'
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case UPDATE_COLOR:
+      return action.color
+    default:
+      return state
+  }
+}
 
 /**
  * 创建Color组件
@@ -9,8 +20,9 @@ export const ColorContext = createContext()
  */
 
 export const Color = props => {
+  const [color, dispatch] = useReducer(reducer, 'blue')
   return (
-    <ColorContext.Provider value={{ color: 'blue' }}>
+    <ColorContext.Provider value={{ color, dispatch }}>
       {props.children}
     </ColorContext.Provider>
   )
