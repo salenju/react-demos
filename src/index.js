@@ -21,6 +21,8 @@ import AntdInput from './AntdInput'
 
 import ReactHooks from './ReactHooks'
 
+import ReduxDemo from './ReduxDemo'
+
 const Example = {
   RowCrollDemo, RowCrollDemo01, RowCrollDemo02, RowCrollDemo03,
   CheckBoxDemo01,
@@ -33,6 +35,7 @@ const Example = {
   Cascader,
   AntdInput,
   ReactHooks,
+  ReduxDemo,
 }
 
 export default Example
