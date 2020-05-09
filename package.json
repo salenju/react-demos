@@ -17,7 +17,7 @@
     "react-scripts": "3.0.1",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
-    "styled-components": "^4.3.2"
+    "styled-components": "^5.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -68,11 +68,7 @@
     "@babel/preset-env": "^7.5.4",
     "@babel/preset-react": "^7.0.0",
     "@storybook/react": "^5.1.9",
-    "babel-loader": "^8.0.6",
     "husky": "^4.2.3",
     "lint-staged": "^10.0.8"
-  },
-  "resolutions": {
-    "styled-components": "^3.3.3"
   }
 }

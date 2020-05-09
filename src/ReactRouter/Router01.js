@@ -1,26 +1,32 @@
 import React from 'react'
-import { HashRouter, Route, Switch } from 'react-router-dom'
-import Loadable from 'react-loadable'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
-const TestComponent = {
-  EffectHook: Loadable({
-    loader: () => import('../EffectHook/EffectHook01')
-  }),
-  StateHook: Loadable({
-    loader: () => import('../StateHook/StateHook01')
-  })
-}
+const Home = () => <h2>Home</h2>
+const About = () => <h2>About</h2>
+const Users = () => <h2>Users</h2>
 
-const Router01 = () => {
+const Router01 = () => (
+  <Router>
+    <div>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+          <li>
+            <Link to="/users">Users</Link>
+          </li>
+        </ul>
+      </nav>
 
-  return (
-    <HashRouter>
-      <Switch>
-        <Route exact path='/effect-hook' component={TestComponent.EffectHook} />
-        <Route path='/state-hook' component={TestComponent.StateHook} />
-      </Switch>
-    </HashRouter>
-  )
-}
+      <Route exact path="/" component={Home} />
+      <Route exact path="/about" component={About} />
+      <Route exact path="/users" component={Users} />
+    </div>
+  </Router>
+)
 
 export default Router01
