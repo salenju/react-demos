@@ -1,3 +1,6 @@
+import React from 'react'
+import ReactDOM from 'react-dom'
+
 import RowCrollDemo from './RowCroll/RowCrollDemo'
 import RowCrollDemo01 from './RowCroll/RowCrollDemo01'
 import RowCrollDemo02 from './RowCroll/RowCrollDemo02'
@@ -11,7 +14,11 @@ import CustomTextInput from './Refs/CustomTextInput'
 import AutoFocusTextInput from './Refs/AutoFocusTextInput'
 
 import Context01 from './Context/Context01'
+
+// React Router
 import Link01 from './ReactRouter/Link01'
+import Router01 from './ReactRouter/Router01'
+import Router02 from './ReactRouter/Router02'
 
 import Computed from './Mobx/Computed'
 
@@ -30,12 +37,14 @@ const Example = {
   CustomTextInput,
   AutoFocusTextInput,
   Context01,
-  Link01,
+  Link01, Router01, Router02,
   Computed,
   Cascader,
   AntdInput,
   ReactHooks,
   ReduxDemo,
 }
+
+ReactDOM.render(<Router02 />, document.getElementById('root'))
 
 export default Example
