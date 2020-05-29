@@ -3,7 +3,4 @@ import { storiesOf } from '@storybook/react'
 
 import ReduxDemo from '../src/ReduxDemo'
 
-
-storiesOf('Redux Demo', module).add('StateHook01', () => (
-  <ReduxDemo />
-))
+storiesOf('Redux Demo', module).add('StateHook01', () => <ReduxDemo />)
