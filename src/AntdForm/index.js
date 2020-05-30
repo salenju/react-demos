@@ -1,10 +1,13 @@
 import React from 'react'
-import { Form, InputNumber } from 'antd'
+import { Form, InputNumber, Input, Button } from 'antd'
+
+import Store from './Store'
 
 const FormItem = Form.Item
 
 const AntdForm = Form.create()((props) => {
   const { validateFields, getFieldDecorator } = props.form
+  const { state, actions } = Store
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -17,12 +20,7 @@ const AntdForm = Form.create()((props) => {
 
   const validateToNextPassword = (rule, value, callback) => {
     const form = props.form
-    let regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d$@$!%*#?&_]{8,16}$/
-    if (!regex.test(value)) {
-      let msg = i18n.Text('myaccount.common.use8to16CharactersForYourPassword')
-      callback(msg)
-    }
-    if (value && store.confirmDirty) {
+    if (value && state.confirmDirty) {
       form.validateFields(['confirm'], { force: true })
     }
     callback()
@@ -31,8 +29,9 @@ const AntdForm = Form.create()((props) => {
   // 校验前后两次密码是否一致
   const compareToFirstPassword = (rule, value, callback) => {
     const form = props.form
-    if (value && value !== form.getFieldValue('password')) {
-      let msg = i18n.Text('myaccount.common.twoPasswordsInconsistent')
+    console.log('---->', form.getFieldValue('from'))
+    if (value && (value < 10 || value < form.getFieldValue('from'))) {
+      let msg = '后面的值要大于前面的值'
       callback(msg)
     } else {
       callback()
@@ -43,34 +42,35 @@ const AntdForm = Form.create()((props) => {
     <Form onSubmit={handleSubmit}>
       <FormItem label="Test">
         <FormItem>
-          {getFieldDecorator('tFrom', {
+          {getFieldDecorator('from', {
             rules: [
-              {
-                required: true,
-                message: i18n.Text('chartering.pleaseEnterPassword'),
-              },
               {
                 validator: (rule, value, callback) =>
                   validateToNextPassword(rule, value, callback),
               },
             ],
-          })(<InputNumber />)}
+          })(<InputNumber min={10} precision={1} />)}
         </FormItem>
         -
         <FormItem>
-          {getFieldDecorator('tTO', {
+          {getFieldDecorator('to', {
             rules: [
               {
-                required: true,
-                message: i18n.Text('chartering.pleaseEnterPassword'),
+                required: false,
+                message: '请输入',
               },
               {
                 validator: (rule, value, callback) =>
-                compareToFirstPassword(rule, value, callback),
+                  compareToFirstPassword(rule, value, callback),
               },
             ],
-          })(<InputNumber />)}
+          })(
+            <InputNumber precision={1} onBlur={(e) => actions.handleConfirmBlur(e)} />
+          )}
         </FormItem>
+      </FormItem>
+      <FormItem>
+        <Button htmlType="submit">Submit</Button>
       </FormItem>
     </Form>
   )
