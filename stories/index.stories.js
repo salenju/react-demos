@@ -18,6 +18,8 @@ const {
   Computed,
   Cascader,
   AntdForm,
+  ClassComponent,
+  LocalClock,
 } = Example
 
 storiesOf('RowCroll', module)
@@ -44,3 +46,7 @@ storiesOf('Mobx Demo', module).add('Computed', () => <Computed />)
 
 storiesOf('Cascader', module).add('Cascader', () => <Cascader />)
 storiesOf('AntdForm', module).add('AntdForm', () => <AntdForm />)
+
+storiesOf('React原理', module)
+  .add('ClassComponent', () => <ClassComponent />)
+  .add('LocalClock', () => <LocalClock />)

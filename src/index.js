@@ -32,6 +32,9 @@ import ReduxDemo from './ReduxDemo'
 
 import AntdForm from './AntdForm'
 
+import ClassComponent from './React原理/ClassComponent'
+import LocalClock from './React原理/02_LocalClock'
+
 const Example = {
   RowCrollDemo, RowCrollDemo01, RowCrollDemo02, RowCrollDemo03,
   CheckBoxDemo01,
@@ -46,6 +49,8 @@ const Example = {
   AntdForm,
   ReactHooks,
   ReduxDemo,
+  ClassComponent,
+  LocalClock
 }
 
 ReactDOM.render(<Router02 />, document.getElementById('root'))
