@@ -28,12 +28,15 @@ import AntdInput from './AntdInput'
 
 import ReactHooks from './ReactHooks'
 
-import ReduxDemo from './ReduxDemo'
+// Redux Demo
+import ReduxDemo01 from './ReduxDemo/ReduxDemo01'
 
 import AntdForm from './AntdForm'
 
+// React 原理
 import ClassComponent from './React原理/ClassComponent'
 import LocalClock from './React原理/02_LocalClock'
+import LifeCycle from './React原理/LifeCycle'
 
 const Example = {
   RowCrollDemo, RowCrollDemo01, RowCrollDemo02, RowCrollDemo03,
@@ -51,6 +54,8 @@ const Example = {
   ReduxDemo,
   ClassComponent,
   LocalClock
+  ReduxDemo01,
+  LifeCycle,
 }
 
 ReactDOM.render(<Router02 />, document.getElementById('root'))

@@ -20,6 +20,7 @@ const {
   AntdForm,
   ClassComponent,
   LocalClock,
+  LifeCycle,
 } = Example
 
 storiesOf('RowCroll', module)
@@ -50,3 +51,4 @@ storiesOf('AntdForm', module).add('AntdForm', () => <AntdForm />)
 storiesOf('React原理', module)
   .add('ClassComponent', () => <ClassComponent />)
   .add('LocalClock', () => <LocalClock />)
+  .add('生命周期', () => <LifeCycle />)
