@@ -30,6 +30,7 @@ import ReactHooks from './ReactHooks'
 
 // Redux Demo
 import ReduxDemo01 from './ReduxDemo/ReduxDemo01'
+import ReduxDemo02 from './ReduxDemo/ReduxDemo02'
 
 import AntdForm from './AntdForm'
 
@@ -51,13 +52,12 @@ const Example = {
   AntdInput,
   AntdForm,
   ReactHooks,
-  ReduxDemo,
   ClassComponent,
-  LocalClock
-  ReduxDemo01,
+  LocalClock,
+  ReduxDemo01,ReduxDemo02,
   LifeCycle,
 }
 
-ReactDOM.render(<Router02 />, document.getElementById('root'))
+ReactDOM.render(<ReduxDemo02 />, document.getElementById('root'))
 
 export default Example

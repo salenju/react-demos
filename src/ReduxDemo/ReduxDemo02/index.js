@@ -1,9 +1,7 @@
-import ReactDOM from 'react-dom'
+import React from 'react'
 import { createStore } from 'redux'
 
 import Vote from './Vote'
-import VoteBody from './VoteBody'
-import VoteFooter from './VoteFooter'
 /**
  * 创建reducer
  *  reducer作用：
@@ -36,11 +34,12 @@ let reducer = (state = { n: 0, m: 0 }, action) => {
  */
 let store = createStore(reducer)
 
-ReactDOM.render(
-  <main>
-    <Vote title={('Salen', 'Helen')} store={store} />
-    <VoteBody store={store} />
-    <VoteFooter store={store} />
-  </main>,
-  root
-)
+export default class ReduxDemo02 extends React.Component {
+  render() {
+    return (
+      <div>
+        <Vote title={('Salen', 'Helen')} store={store} />
+      </div>
+    )
+  }
+}

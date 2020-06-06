@@ -27,9 +27,11 @@ export default class VoteBody extends React.Component {
   }
 
   render() {
-    let { n, m } = this.state,
-      rate = (n / (n + m)) * 100
-    isNaN(rate) ? (rate = 0) : null
+    let { n, m } = this.state
+    let rate = (n / (n + m)) * 100
+    if (isNaN(rate)) {
+      rate = 0
+    }
     return (
       <section>
         支持人数：<span>{n}</span>

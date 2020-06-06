@@ -1,3 +1,6 @@
+
+import React from 'react'
+
 class Parent {
   constructor(x, y) {
     // 给实例设置私有属性
@@ -27,7 +30,7 @@ console.log('--->', p.x) // 22
 console.log('--->', p.AA) // 11
 console.log('--->', p.BB) // undefined
 
-class Children extends Parent {
+export default class Children extends Parent {
   constructor() {
     /**
      * ES6中的extends继承，一旦使用了constructor，第一行必须设置super执行：相当于React.Component.call(this),

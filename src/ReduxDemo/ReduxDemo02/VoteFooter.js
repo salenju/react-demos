@@ -6,7 +6,7 @@ export default class VoteFooter extends React.Component {
   }
 
   render() {
-    let { store:{dispatch}} = this.props,
+    let { store:{dispatch}} = this.props
 
     return (
       <section>
