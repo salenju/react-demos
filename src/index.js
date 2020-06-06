@@ -31,6 +31,7 @@ import ReactHooks from './ReactHooks'
 // Redux Demo
 import ReduxDemo01 from './ReduxDemo/ReduxDemo01'
 import ReduxDemo02 from './ReduxDemo/ReduxDemo02'
+import ReduxDemo03 from './ReduxDemo/ReduxDemo03'
 
 import AntdForm from './AntdForm'
 
@@ -40,13 +41,19 @@ import LocalClock from './React原理/02_LocalClock'
 import LifeCycle from './React原理/LifeCycle'
 
 const Example = {
-  RowCrollDemo, RowCrollDemo01, RowCrollDemo02, RowCrollDemo03,
+  RowCrollDemo,
+  RowCrollDemo01,
+  RowCrollDemo02,
+  RowCrollDemo03,
   CheckBoxDemo01,
-  CallbackRef01, CallbackRef02,
+  CallbackRef01,
+  CallbackRef02,
   CustomTextInput,
   AutoFocusTextInput,
   Context01,
-  Link01, Router01, Router02,
+  Link01,
+  Router01,
+  Router02,
   Computed,
   Cascader,
   AntdInput,
@@ -54,10 +61,12 @@ const Example = {
   ReactHooks,
   ClassComponent,
   LocalClock,
-  ReduxDemo01,ReduxDemo02,
+  ReduxDemo01,
+  ReduxDemo02,
+  ReduxDemo03,
   LifeCycle,
 }
 
-ReactDOM.render(<ReduxDemo02 />, document.getElementById('root'))
+ReactDOM.render(<ReduxDemo03 />, document.getElementById('root'))
 
 export default Example

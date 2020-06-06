@@ -3,10 +3,7 @@ import React from 'react'
 export default class VoteBody extends React.Component {
   constructor(props) {
     super(props)
-    let {
-        store: { getState },
-      } = this.props,
-      { n, m } = getState()
+    let { n, m } = this.props.store.getState().vote
     this.state = { n, m }
   }
 
@@ -15,7 +12,7 @@ export default class VoteBody extends React.Component {
       store: { getState, subscribe },
     } = this.props
     subscribe(() => {
-      let { n, m } = getState()
+      let { n, m } = getState().vote
       this.setState({
         n,
         m,
