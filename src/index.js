@@ -33,6 +33,7 @@ import ReduxDemo01 from './ReduxDemo/ReduxDemo01'
 import ReduxDemo02 from './ReduxDemo/ReduxDemo02'
 import ReduxDemo03 from './ReduxDemo/ReduxDemo03'
 import ReduxDemo04 from './ReduxDemo/ReduxDemo04'
+import ReduxToDoList from './ReduxDemo/ReduxToDoList'
 
 import AntdForm from './AntdForm'
 
@@ -66,9 +67,10 @@ const Example = {
   ReduxDemo02,
   ReduxDemo03,
   ReduxDemo04,
+  ReduxToDoList,
   LifeCycle,
 }
 
-ReactDOM.render(<ReduxDemo04 />, document.getElementById('root'))
+ReactDOM.render(<ReduxToDoList />, document.getElementById('root'))
 
 export default Example
