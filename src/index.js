@@ -32,6 +32,7 @@ import ReactHooks from './ReactHooks'
 import ReduxDemo01 from './ReduxDemo/ReduxDemo01'
 import ReduxDemo02 from './ReduxDemo/ReduxDemo02'
 import ReduxDemo03 from './ReduxDemo/ReduxDemo03'
+import ReduxDemo04 from './ReduxDemo/ReduxDemo04'
 
 import AntdForm from './AntdForm'
 
@@ -64,9 +65,10 @@ const Example = {
   ReduxDemo01,
   ReduxDemo02,
   ReduxDemo03,
+  ReduxDemo04,
   LifeCycle,
 }
 
-ReactDOM.render(<ReduxDemo03 />, document.getElementById('root'))
+ReactDOM.render(<ReduxDemo04 />, document.getElementById('root'))
 
 export default Example

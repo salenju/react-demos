@@ -28,7 +28,7 @@ let reducer = (state = { n: 0, m: 0 }, action) => {
  * 创建store：需要把Reducer传递进来
  * store中提供三个方法：
  *  - dispatch: 派发行为（传递一个对象，对象中含有type属性）
- *  - subscribe: 事件池追加方法
+ *  - subscribe: 事件池追加方法(容器状态改变，执行subscript追加的方法，是的组件重新渲染)
  *  - getState: 获取最新管理的状态信息
  *
  */
