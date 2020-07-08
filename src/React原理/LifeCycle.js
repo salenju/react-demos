@@ -20,9 +20,9 @@ class LifeCycle extends React.Component {
   }
 
   componentDidMount() {
-    // setInterval(() => {
-    //   this.setState({ n: this.state.n + 1 })
-    // }, 2000)
+    setInterval(() => {
+      this.setState({ n: this.state.n + 1 })
+    }, 2000)
     console.log('4=>componentDidMount', this.state.n)
   }
 
