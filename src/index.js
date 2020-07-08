@@ -16,6 +16,7 @@ import AutoFocusTextInput from './Refs/AutoFocusTextInput'
 import Context01 from './Context/Context01'
 
 // React Router
+import App from './router'
 import Link01 from './ReactRouter/Link01'
 import Router01 from './ReactRouter/Router01'
 import Router02 from './ReactRouter/Router02'
@@ -71,6 +72,6 @@ const Example = {
   LifeCycle,
 }
 
-ReactDOM.render(<ReduxToDoList />, document.getElementById('root'))
+ReactDOM.render(<App />, document.getElementById('root'))
 
 export default Example
