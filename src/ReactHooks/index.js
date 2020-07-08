@@ -12,6 +12,8 @@ import UseContext01 from "./UseContext/UseContext01"
 import UseReducer01 from './UseReducer/UseReducer01'
 import UseReducer02 from './UseReducer/UseReducer02'
 
+import UseCallback01 from './UseCallback/UseCallback01'
+
 const ReactHooks = {
   StateHook01,
   StateHook02,
@@ -23,6 +25,7 @@ const ReactHooks = {
   UseContext01,
   UseReducer01,
   UseReducer02,
+  UseCallback01,
 };
 
 export default ReactHooks
