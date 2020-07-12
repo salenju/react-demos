@@ -1,4 +1,5 @@
 import Memo from './Memo'
-import UseCallback from './UseCallback'
+import UseCallback from './useCallback'
+import UseMemo from './useMemo'
 
-export { Memo, UseCallback }
+export { Memo, UseCallback, UseMemo }
