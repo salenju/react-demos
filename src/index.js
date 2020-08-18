@@ -43,20 +43,21 @@ import ClassComponent from './React原理/ClassComponent'
 import LocalClock from './React原理/02_LocalClock'
 import LifeCycle from './React原理/LifeCycle'
 
+//ProductManagement
+import ProductManagement01 from './ProductManagement/Demo01'
+import ProductManagement02 from './ProductManagement/Demo02'
+
 const Example = {
   RowCrollDemo,
   RowCrollDemo01,
   RowCrollDemo02,
   RowCrollDemo03,
   CheckBoxDemo01,
-  CallbackRef01,
-  CallbackRef02,
-  CustomTextInput,
-  AutoFocusTextInput,
+  CallbackRef01, CallbackRef02,
+  CustomTextInput,AutoFocusTextInput,
   Context01,
   Link01,
-  Router01,
-  Router02,
+  Router01, Router02,
   Computed,
   Cascader,
   AntdInput,
@@ -64,12 +65,9 @@ const Example = {
   ReactHooks,
   ClassComponent,
   LocalClock,
-  ReduxDemo01,
-  ReduxDemo02,
-  ReduxDemo03,
-  ReduxDemo04,
-  ReduxToDoList,
+  ReduxDemo01, ReduxDemo02, ReduxDemo03, ReduxDemo04, ReduxToDoList,
   LifeCycle,
+  ProductManagement01, ProductManagement02,
 }
 
 ReactDOM.render(<App />, document.getElementById('root'))
