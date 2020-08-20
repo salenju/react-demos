@@ -21,7 +21,8 @@ const {
   ClassComponent,
   LocalClock,
   LifeCycle,
-  ProductManagement01,ProductManagement02
+  ProductManagement01,ProductManagement02,
+  SKUList,
 } = Example
 
 storiesOf('RowCroll', module)
@@ -57,3 +58,6 @@ storiesOf('React原理', module)
 storiesOf('商品管理界面', module)
 .add('方案-1', () => <ProductManagement01 />)
 .add('方案-2', () => <ProductManagement02 />)
+
+storiesOf('SKU管理', module)
+.add('方案-1', () => <SKUList />)

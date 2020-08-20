@@ -47,6 +47,10 @@ import LifeCycle from './React原理/LifeCycle'
 import ProductManagement01 from './ProductManagement/Demo01'
 import ProductManagement02 from './ProductManagement/Demo02'
 
+// SKUList
+import SKUList from './SKUList'
+
+
 const Example = {
   RowCrollDemo,
   RowCrollDemo01,
@@ -68,6 +72,7 @@ const Example = {
   ReduxDemo01, ReduxDemo02, ReduxDemo03, ReduxDemo04, ReduxToDoList,
   LifeCycle,
   ProductManagement01, ProductManagement02,
+  SKUList,
 }
 
 ReactDOM.render(<App />, document.getElementById('root'))
