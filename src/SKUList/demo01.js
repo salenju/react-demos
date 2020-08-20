@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 
 const SKU_LIST = [
   {
@@ -134,8 +135,13 @@ const SKU_LIST = [
   },
 ]
 
-const SKUList = () => {
-  let allSpecsList = []
+const SKUList01 = () => {
+  let _allSpecsList = [] // 转置后的矩阵数组
+  let _selectable = []
+  let _selected = []
+  let _selectTips = '请选择'
+  let _selectedItem = null
+
   let currentSkuList = SKU_LIST.map((item) => item.specs)
 
   const _transMatrix = () => {
@@ -171,19 +177,18 @@ const SKUList = () => {
 
   const getAllSpecsList = () => {
     const transResult = _transMatrix()
-    allSpecsList = Object.keys(transResult).map((key) => {
+    _allSpecsList = Object.keys(transResult).map((key) => {
       let obj = JSON.parse(JSON.stringify(transResult[key]))
       obj.value_list = Object.keys(obj.value_list).map(
         (vk) => obj.value_list[vk]
       )
       return obj
     })
-    return allSpecsList
   }
 
   const getSelectable = () => {
     let selectable = {}
-    if (allSpecsList.length === 0) {
+    if (_allSpecsList.length === 0) {
       getAllSpecsList()
     }
 
@@ -191,11 +196,11 @@ const SKUList = () => {
       currentSkuList = SKU_LIST.map((item) => item.specs)
     }
 
-    const rowLength = allSpecsList.length
+    const rowLength = _allSpecsList.length
 
     for (let row = 0; row < rowLength; row++) {
-      let { key_id, key } = allSpecsList[row]
-      let columnList = allSpecsList[row].value_list
+      let { key_id, key } = _allSpecsList[row]
+      let columnList = _allSpecsList[row].value_list
       selectable[key_id] = {
         key_id,
         key,
@@ -240,48 +245,45 @@ const SKUList = () => {
     return selectable
   }
 
-  let selectable = getSelectable()
-  console.log('-------->allSpecsList:', allSpecsList)
-  console.log('-------->selectable:', selectable)
+  _selectable = getSelectable()
+  console.log('-------->_allSpecsList:', _allSpecsList)
+  console.log('-------->_selectable:', _selectable)
 
-  // 点击某中规格时候的处理
-  const handleClickSpecs = (event) => {
-    const { key_id, value_id, select, x, y } = event.currentTarget.dataset
+  // 点击某种规格时候的处理
+  const handleClickSpecs = (params) => {
+    const { key_id, value_id, select, x, y } = params
+    console.log('-------->handleClickSpecs-params:', params)
+
     if (select === 'disabled') {
       return
     }
 
     if (select === 'selectable') {
-      this.data.selected.forEach((item, index) => {
+      _selected.forEach((item, index) => {
         if (item.x === x) {
-          this.data.selected.splice(index, 1)
+          _selected.splice(index, 1)
         }
       })
-      this.data.selected.push({ x, y, key_id, value_id })
+      _selected.push({ x, y, key_id, value_id })
       handleSelectOneOption(x, y, key_id, value_id)
     }
 
     if (select === 'active') {
       clearAllSelectedAndDisabled()
-      this.data.selected.forEach((item, index) => {
+      _selected.forEach((item, index) => {
         if (item.x === x && item.y === y) {
-          this.data.selected.splice(index, 1)
+          _selected.splice(index, 1)
         }
       })
 
-      this.data.selected.forEach((item) => {
+      _selected.forEach((item) => {
         handleSelectOneOption(item.x, item.y, item.key_id, item.value_id)
       })
     }
-
-    this.setData({
-      allSpecsList: allSpecsList,
-      selected: this.data.selected,
-    })
   }
 
   const clearAllSelectedAndDisabled = () => {
-    allSpecsList.forEach((row) => {
+    _allSpecsList.forEach((row) => {
       row.value_list.forEach((specs) => {
         specs.selected = false
         specs.disabled = false
@@ -289,19 +291,19 @@ const SKUList = () => {
     })
   }
 
+  //
   const handleSelectOneOption = (x, y, key_id, value_id) => {
-    allSpecsList[x].value_list[y].selected = true
-    allSpecsList[x].value_list.forEach((specs, index) => {
+    _allSpecsList[x].value_list[y].selected = true
+    _allSpecsList[x].value_list.forEach((specs, index) => {
       if (index === y) {
         specs.selected = true
       } else {
         specs.selected = false
       }
     })
-    const selectableMatchItems = this.data.selectable[key_id].selectableList[
-      value_id
-    ].matchItems
-    allSpecsList.forEach((specsRow, index) => {
+    const selectableMatchItems =
+      _selectable[key_id].selectableList[value_id].matchItems
+    _allSpecsList.forEach((specsRow, index) => {
       if (index === x) {
         return
       }
@@ -320,7 +322,76 @@ const SKUList = () => {
     })
   }
 
-  return <div>SKUList</div>
+  const getSelectedInfo = () => {
+    if (_selected.length === _allSpecsList.length) {
+      let selectedText = []
+      _allSpecsList.forEach((rowSpecs) => {
+        rowSpecs.value_list.forEach((specs) => {
+          if (specs.selected) {
+            selectedText.push(specs.value)
+          }
+        })
+      })
+      _selectTips = '已选：' + selectedText.join(',')
+      _selectedItem = getSelectable(selectedText.join('·'))
+      return
+    }
+    const selectedRow = _selected.map((item) => item.x)
+    const unSelected = []
+    _allSpecsList.forEach((item, index) => {
+      if (!selectedRow.includes(index)) {
+        unSelected.push(item.key)
+      }
+    })
+    _selectTips = '请选择：' + unSelected.join(',')
+  }
+
+  const getButtonStatus = (selected, disabled) => {
+    let tarValue = 'disabled'
+    if (selected) {
+      tarValue = 'active'
+    } else if (!selected && !disabled) {
+      tarValue = 'selectable'
+    }
+
+    return tarValue
+  }
+
+  return (
+    <Wrapper className="sku-list">
+      <h3 className="sl-price">{_selectTips}</h3>
+      {_allSpecsList.map((spec,x) => {
+        return (
+          <div key={spec.key_id}>
+            <span>{spec.key}</span>
+            {spec.value_list.map((value,y) => (
+              <button
+                key={value.value_id}
+                disabled={value.disabled}
+                onClick={() =>
+                  handleClickSpecs({
+                    key_id: spec.key_id,
+                    value_id: value.value_id,
+                    select: getButtonStatus(value.selected, value.disabled),
+                    x,
+                    y
+                  })
+                }
+              >
+                {value.value}
+              </button>
+            ))}
+          </div>
+        )
+      })}
+    </Wrapper>
+  )
 }
 
-export default SKUList
+const Wrapper = styled('div')`
+  .sl-price {
+    color: red;
+  }
+`
+
+export default SKUList01
