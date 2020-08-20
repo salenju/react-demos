@@ -265,6 +265,8 @@ const SKUList01 = () => {
         }
       })
       _selected.push({ x, y, key_id, value_id })
+      console.log('-------->handleClickSpecs-_selected:', _selected)
+
       handleSelectOneOption(x, y, key_id, value_id)
     }
 
@@ -315,11 +317,16 @@ const SKUList01 = () => {
         const result = selectableMatchItems[specsRow.key_id].find(
           (item) => item.value_id === specs.value_id
         )
+        console.log('-------->handleSelectOneOption-result:', result)
+
         if (!result) {
           specs.disabled = true
         }
       })
+
     })
+    console.log('-------->handleSelectOneOption-_allSpecsList:', _allSpecsList)
+
   }
 
   const getSelectedInfo = () => {
