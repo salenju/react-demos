@@ -22,7 +22,7 @@ const {
   LocalClock,
   LifeCycle,
   ProductManagement01,ProductManagement02,
-  SKUList01,
+  SkuList,
 } = Example
 
 storiesOf('RowCroll', module)
@@ -60,4 +60,4 @@ storiesOf('商品管理界面', module)
 .add('方案-2', () => <ProductManagement02 />)
 
 storiesOf('SKU管理', module)
-.add('方案-1', () => <SKUList01 />)
+.add('方案-1', () => <SkuList />)
