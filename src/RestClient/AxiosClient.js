@@ -1,3 +1,6 @@
+import axios from 'axios'
+
+
 /**
  * Axios
  *
@@ -28,7 +31,26 @@ export const RestCancelToken = () => {
   return axios.CancelToken.source()
 }
 
-export class RestClient {}
+export class RestClient {
+  constructor(config) {
+    this._config = Object.assign(
+      {
+        baseURL: '/api',
+        timeout: 1000,
+        retry: 0,
+        headers: {},
+      },
+      config
+    )
+
+    this.headerConfig = this._config.headers
+    this.client = axios.create(this._config)
+  }
+
+  call = async () => {
+
+  }
+}
 
 /**
  * 请求拦截
