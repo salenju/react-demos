@@ -36,11 +36,7 @@ const Spec = (props) => {
 
   useEffect(() => {
     const _matchSpec = specCombinationList.find(
-      (item) => {
-        let _specsS = specsS
-        console.log('--------->>>>specsS.join-55555', item.specs.join('_') === _specsS.sort().join('_'))
-        return  item.specs.join('_') === _specsS.sort().join('_')
-      }
+    (item) => item.specs.join(',') === specsS.join(',')
     )
     console.log('--------->>>>_matchSpec', _matchSpec)
 
@@ -48,8 +44,20 @@ const Spec = (props) => {
     setMatchSpec(_matchSpec)
   }, [specsS, specCombinationList])
 
-  // console.log('--------->>>>specList', specList)
-  // console.log('--------->>>>optionSpecs', optionSpecs)
+  const isEquel = (val1, val2) => {
+    if (!val1 || !val2) {
+      return false
+    }
+    console.log(
+      '--------->>>>isEquel-55555',
+      val1.sort().join('_') === val2.sort().join('_')
+    )
+
+    return val1.sort().join('_') === val2.sort().join('_')
+  }
+
+  console.log('--------->>>>specList', specList)
+  console.log('--------->>>>optionSpecs', optionSpecs)
   console.log('--------->>>>specsS', specsS)
   console.log('--------->>>>specCombinationList', specCombinationList)
   console.log('--------->>>>matchSpec', matchSpec)
