@@ -20,6 +20,7 @@ const actions = {
   transMatrix: action(() => {
     let transResult = {}
     const { currentSkuList } = state
+    console.log('=========>>>>currentSkuList:', toJS(currentSkuList))
 
     currentSkuList.forEach((specs) => {
       specs.forEach((item) => {
@@ -46,6 +47,8 @@ const actions = {
         }
       })
     })
+    console.log('=========>>>>transMatrix:', transResult)
+
     return transResult
   }),
 
@@ -59,6 +62,8 @@ const actions = {
       )
       return obj
     })
+    console.log('=========>>>>_allSpecsList:', toJS( state._allSpecsList))
+
   }),
 
   //

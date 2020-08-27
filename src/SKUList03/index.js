@@ -1,13 +1,22 @@
-import React, { useState, useMemo } from 'react'
+import React, { useState, useMemo, useEffect } from 'react'
 import SpecAdjoinMatrix from './utils/spec-adjoin-martix'
 import './spec.css'
 const classNames = require('classnames')
 
 const Spec = (props) => {
-  const { specList, specCombinationList, defaultSelect, callback } = props
+  const {
+    specList,
+    specCombinationList,
+    defaultSelect,
+    callback,
+    defaultSpecs,
+  } = props
 
   // 已选择的规格，长度为规格列表的长度
-  const [specsS, setSpecsS] = useState(Array(specList.length).fill(''))
+  const [specsS, setSpecsS] = useState(
+    defaultSpecs ? defaultSpecs : Array(specList.length).fill('')
+  )
+  const [matchSpec, setMatchSpec] = useState(defaultSelect)
 
   // 创建一个规格矩阵
   const specAdjoinMatrix = useMemo(
@@ -16,7 +25,6 @@ const Spec = (props) => {
   )
   // 获得可选项表
   const optionSpecs = specAdjoinMatrix.getSpecscOptions(specsS)
-  // console.log('--------->>>>optionSpecs',optionSpecs)
 
   const handleClick = function (bool, text, index) {
     // 排除可选规格里面没有的规格
@@ -24,17 +32,26 @@ const Spec = (props) => {
     // 根据text判断是否已经被选中了
     specsS[index] = specsS[index] === text ? '' : text
     setSpecsS(specsS.slice())
-    callback(matchSpec)
   }
 
-  const matchSpec = useMemo(
-    () =>
-      specCombinationList.find(
-        (item) => item.specs.join(',') === specsS.join(',')
-      ),
-    [specsS, specCombinationList]
-  )
+  useEffect(() => {
+    const _matchSpec = specCombinationList.find(
+      (item) => {
+        let _specsS = specsS
+        console.log('--------->>>>specsS.join-55555', item.specs.join('_') === _specsS.sort().join('_'))
+        return  item.specs.join('_') === _specsS.sort().join('_')
+      }
+    )
+    console.log('--------->>>>_matchSpec', _matchSpec)
 
+    callback(_matchSpec)
+    setMatchSpec(_matchSpec)
+  }, [specsS, specCombinationList])
+
+  // console.log('--------->>>>specList', specList)
+  // console.log('--------->>>>optionSpecs', optionSpecs)
+  console.log('--------->>>>specsS', specsS)
+  console.log('--------->>>>specCombinationList', specCombinationList)
   console.log('--------->>>>matchSpec', matchSpec)
 
   return (

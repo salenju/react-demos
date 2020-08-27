@@ -16,10 +16,10 @@ const SkuList = observer(() => {
   } = state
   const { handleClickSpecs, getButtonStatus } = actions
 
-  console.log('=========>>>>_selected:', toJS(_selected))
-  console.log('=========>>>>_selectable:', toJS(_selectable))
-  console.log('=========>>>>_allSpecsList:', toJS(_allSpecsList))
-  console.log('=========>>>>_selectedItem:', toJS(_selectedItem))
+  // console.log('=========>>>>_selected:', toJS(_selected))
+  // console.log('=========>>>>_selectable:', toJS(_selectable))
+  // console.log('=========>>>>_allSpecsList:', toJS(_allSpecsList))
+  // console.log('=========>>>>_selectedItem:', toJS(_selectedItem))
 
   return (
     <Wrapper className="sku-list">

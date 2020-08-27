@@ -2,7 +2,11 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 
 import Example from '../src'
-import SKU from './Mock/SKU'
+import SKU from './Mock/SKU/SKU'
+import {
+  getSpecList,
+  getSpecCombinationList,
+} from './Mock/SKU/exchange-sku-list'
 
 const {
   RowCrollDemo,
@@ -66,9 +70,12 @@ storiesOf('SKU管理', module)
   .add('方案-1', () => <SkuList />)
   .add('方案-3', () => (
     <SkuList03
-      specList={SKU.specList}
-      specCombinationList={SKU.specCombinationList}
-      // defaultSelect={}
-      callback={(value) => console.log('----------->SkuList03-callback:',value)}
+      specList={getSpecList(SKU.SKU_LIST)}
+      specCombinationList={getSpecCombinationList(SKU.SKU_LIST)}
+      // defaultSelect={SKU.defaultSelect}
+      callback={(value) =>
+        console.log('----------->SkuList03-callback:', value)
+      }
+      // defaultSpecs={SKU.defaultSelect.specs}
     />
   ))
