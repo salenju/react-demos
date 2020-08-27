@@ -2,6 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 
 import Example from '../src'
+import SKU from './Mock/SKU'
 
 const {
   RowCrollDemo,
@@ -21,8 +22,10 @@ const {
   ClassComponent,
   LocalClock,
   LifeCycle,
-  ProductManagement01,ProductManagement02,
+  ProductManagement01,
+  ProductManagement02,
   SkuList,
+  SkuList03,
 } = Example
 
 storiesOf('RowCroll', module)
@@ -56,8 +59,16 @@ storiesOf('React原理', module)
   .add('生命周期', () => <LifeCycle />)
 
 storiesOf('商品管理界面', module)
-.add('方案-1', () => <ProductManagement01 />)
-.add('方案-2', () => <ProductManagement02 />)
+  .add('方案-1', () => <ProductManagement01 />)
+  .add('方案-2', () => <ProductManagement02 />)
 
 storiesOf('SKU管理', module)
-.add('方案-1', () => <SkuList />)
+  .add('方案-1', () => <SkuList />)
+  .add('方案-3', () => (
+    <SkuList03
+      specList={SKU.specList}
+      specCombinationList={SKU.specCombinationList}
+      // defaultSelect={}
+      callback={(value) => console.log('----------->SkuList03-callback:',value)}
+    />
+  ))

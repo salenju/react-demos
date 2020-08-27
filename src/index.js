@@ -49,6 +49,7 @@ import ProductManagement02 from './ProductManagement/Demo02'
 
 // SKUList
 import SkuList from './SKUList'
+import SkuList03 from './SKUList03'
 
 
 const Example = {
@@ -72,7 +73,7 @@ const Example = {
   ReduxDemo01, ReduxDemo02, ReduxDemo03, ReduxDemo04, ReduxToDoList,
   LifeCycle,
   ProductManagement01, ProductManagement02,
-  SkuList
+  SkuList,SkuList03
 }
 
 ReactDOM.render(<App />, document.getElementById('root'))
