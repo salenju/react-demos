@@ -3166,6 +3166,13 @@ aws4@^1.8.0:
   resolved "http://nexus.pm.emarineonline.com/repository/npm_group/aws4/-/aws4-1.10.0.tgz#a17b3a8ea811060e74d47d306122400ad4497ae2"
   integrity sha1-oXs6jqgRBg501H0wYSJACtRJeuI=
 
+axios-retry@^3.1.8:
+  version "3.1.8"
+  resolved "http://nexus.pm.emarineonline.com/repository/npm_group/axios-retry/-/axios-retry-3.1.8.tgz#ffcfed757e1fab8cbf832f8505bb0e0af47c520c"
+  integrity sha1-/8/tdX4fq4y/gy+FBbsOCvR8Ugw=
+  dependencies:
+    is-retry-allowed "^1.1.0"
+
 axios@^0.19.2:
   version "0.19.2"
   resolved "http://nexus.pm.emarineonline.com/repository/npm_group/axios/-/axios-0.19.2.tgz#3ea36c5d8818d0d5f8a8a97a6d36b86cdc00cb27"
@@ -3654,6 +3661,13 @@ bluebird@^3.3.5, bluebird@^3.5.5:
   version "3.7.2"
   resolved "http://nexus.pm.emarineonline.com/repository/npm_group/bluebird/-/bluebird-3.7.2.tgz#9f229c15be272454ffa973ace0dbee79a1b0c36f"
   integrity sha1-nyKcFb4nJFT/qXOs4NvueaGww28=
+
+bmo-global@^0.1.16:
+  version "0.1.16"
+  resolved "http://nexus.pm.emarineonline.com/repository/npm_group/bmo-global/-/bmo-global-0.1.16.tgz#7f0068e9d1ea345fe3f8d6683b63b6214e5fab30"
+  integrity sha512-Ul2nFTL7ix9SpHIJ509Bob58U/xBgQH6p7crCQFd+GpqYAmrIK9tjvKvsKaH84m8rmlht/VHJRHaU8SrtaQgIQ==
+  dependencies:
+    js-cookie "^2.2.0"
 
 bn.js@^4.0.0, bn.js@^4.1.0, bn.js@^4.4.0:
   version "4.11.9"
@@ -7640,6 +7654,11 @@ is-resolvable@^1.0.0:
   resolved "http://nexus.pm.emarineonline.com/repository/npm_group/is-resolvable/-/is-resolvable-1.1.0.tgz#fb18f87ce1feb925169c9a407c19318a3206ed88"
   integrity sha1-+xj4fOH+uSUWnJpAfBkxijIG7Yg=
 
+is-retry-allowed@^1.1.0:
+  version "1.2.0"
+  resolved "http://nexus.pm.emarineonline.com/repository/npm_group/is-retry-allowed/-/is-retry-allowed-1.2.0.tgz#d778488bd0a4666a3be8a1482b9f2baafedea8b4"
+  integrity sha1-13hIi9CkZmo76KFIK58rqv7eqLQ=
+
 is-root@2.1.0:
   version "2.1.0"
   resolved "http://nexus.pm.emarineonline.com/repository/npm_group/is-root/-/is-root-2.1.0.tgz#809e18129cf1129644302a4f8544035d51984a9c"
@@ -8202,6 +8221,11 @@ jest@24.7.1:
   dependencies:
     import-local "^2.0.0"
     jest-cli "^24.7.1"
+
+js-cookie@^2.2.0:
+  version "2.2.1"
+  resolved "http://nexus.pm.emarineonline.com/repository/npm_group/js-cookie/-/js-cookie-2.2.1.tgz#69e106dc5d5806894562902aa5baec3744e9b2b8"
+  integrity sha1-aeEG3F1YBolFYpAqpbrsN0Tpsrg=
 
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"
