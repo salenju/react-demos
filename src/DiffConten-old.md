@@ -1,6 +1,6 @@
 Dr Sit Kwong Lam
-Founder
-Curator and advisor of Marine Online; providing insights to the strategy and development of the platformdevelopment of the platform
+Company Founder
+Curator and advisor of Marine Online; providing insights into the strategy and development of the platform
 Over 28 years of management experience in the oil and gas industry
 A Ph.D. graduate from Nanjing University
 
@@ -13,12 +13,11 @@ Successfully aided many Fortune 500 companies to implement eCommerce technology 
 Tiger Cai
 COO
 16 years of experience in cross-border management within the traditional shipping and technology industries
-Co-founder of China Shipping Online which got listed in the United States
+Co-founder of China Shipping Online, who are listed in the United States
 A graduate of Dalian Maritime University
 
 Kian Hwa Tan
 CFO
-
 Over 20 years of experience in investment banking, venture capital/private equity and M&A
 Held senior management positions in companies such as Sanpower Group, SBI and SembCorp
 Graduated with an MBA from the MIT Sloan School of Management
@@ -31,12 +30,12 @@ Held senior management positions at Citigroup and EMC
 
 Sam Ng
 Vice President
-Over 30 years of experience in the maritime industry and is a qualified captain
+Over 30 years of experience in the maritime industry and a qualified captain
 Served in reputable international shipowner organizations such as BW and Chevron
 10 years of management experience in a broker company
 
 Liu Zhi
-Vice President Ship Supply, China
+Vice President, China
 Over 20 years of experience in marine engineering
 Rich experience in sales of shipbuilding equipment, spare parts as well as ship engine design
 A graduate of Dalian Maritime University
@@ -64,3 +63,15 @@ Marketing manager
 Over 15 years of experience in Marketing, with more than 10 years focusing on digital marketing
 Built a strong online identity for various organizations throughout his career
 A graduate of Staffordshire University and a HubSpot certified professional
+
+Office Environment
+Marine Online provide employees with a safe and comfortable working environment in all our offices; namely Singapore, Shenzhen and Hong Kong. Our offices are located in prime locations with great views of the city’s skyline.
+
+Multiculturalism
+Employees of Marine Online come from diverse cultures and nationalities. With our various backgrounds and religious beliefs, Marine Online creates a working environment that encourages the cultivation of equality, embracing the differences of one another.
+
+Employees' Activities
+Join us
+Connect and transform the maritime industry together.
+Reach out to us with your CV via Email.
+View all open positions here .

@@ -63,3 +63,15 @@ Marketing manager
 Over 15 years of experience in Marketing, with more than 10 years focusing on digital marketing
 Built a strong online identity for various organizations throughout his career
 A graduate of Staffordshire University and a HubSpot certified professional
+
+Office Environment
+Marine Online provide employees with a safe and comfortable working environment in all our offices located in Singapore, Shenzhen and Hong Kong. Our offices are located in prime locations with great views of the city’s skyline
+
+Multiculturalism
+Employees of Marine Online come from diverse cultures and nationalities. With our various backgrounds and religious beliefs, Marine Online creates a working environment that encourages the cultivation of equality and embracing everyone’s differences and the benefits of diversity.
+
+Employees' Activities
+Join us
+Connect and transform the maritime industry together.
+Reach out to us with your CV via Email.
+View all open positions here .
