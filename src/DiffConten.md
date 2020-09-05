@@ -75,3 +75,64 @@ Join us
 Connect and transform the maritime industry together.
 Reach out to us with your CV via Email.
 View all open positions here .
+
+A group of like-minded partners, an exciting career
+Vision and Mission
+To be the leading edge data-driven eCommerce Platform in the Maritime Industry Providing cost-saving, fast, and smart integrated services
+
+Values
+4E
+Enthusiasm
+Endeavor
+Efficiency
+Execution
+
+3A
+Attitude
+Ability
+Achievement
+
+2I
+Integrity
+Innovation
+
+1T
+Teamwork
+
+Media News
+Creating Value Hand-in-Hand
+Press Releases
+Media Library
+
+Investor Relations
+Stay Connected
+
+Singapore
+
+Media Contact (IR/PR)
+Liaison: Dillon Yong
+Tel:+65 6571 5957
+Email:dillon.yong@marineonline.com
+Customer service
+Hotline:+65 6571 5888
+Email:CustomerCare@marineonline.com
+
+Shenzhen
+
+Media Contact (IR/PR)
+Liaison: Cai Yafang
+Tel: +86 755 8436 6360
+Email: caiyf@marineonline.com
+Customer service
+Hotline: +86 755 8829 5987
+Email: China@marineonline.com
+
+Hong Kong
+
+Media Contact (IR/PR)
+Liaison: Tina Tsai
+Tel: +852-3551 9758
+Email: IRPR@marineonline.com
+Customer service
+Hotline: +852 2834 3188
+Email: CustomerCare@marineonline.com
