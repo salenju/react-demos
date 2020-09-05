@@ -177,7 +177,6 @@ Marine Online launched "Global Shipowners Alliance" and "Authorized Service Prov
 January 2020
 Marine Online acquired the domain name
 “MarineOnline.com”
-
 May 2020
 Marine Online signed a strategic cooperation exclusive agreement with Consul-General Embassy of Panama in Singapore
 July 2020
