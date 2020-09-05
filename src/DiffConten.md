@@ -78,7 +78,7 @@ View all open positions here .
 
 A group of like-minded partners, an exciting career
 Vision and Mission
-To be the leading edge data-driven eCommerce Platform in the Maritime Industry Providing cost-saving, fast, and smart integrated services
+To be the leading edge data-driven eCommerce Platform in Maritime Industry Providing cost-saving, fast, and smart integrated services
 
 Values
 4E

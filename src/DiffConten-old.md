@@ -110,28 +110,25 @@ Stay connected
 Singapore
 
 Media Contact (IR/PR)
-Liaison:Dillon Yong
+Liaison: Dillon Yong
 Tel:+65 6571 5957
 Email:dillon.yong@marineonline.com
 Customer service
 Hotline:+65 6571 5888
 Email:CustomerCare@marineonline.com
-Address:15-16F Mapletree Business City, 10 Pasir Panjang Road, Singapore 117439
 
 Media Contact (IR/PR)
-Liaison:Cai Yafang
-Tel:+86 755 8436 6360
-Email:caiyf@marineonline.com
+Liaison: Cai Yafang
+Tel: +86 755 8436 6360
+Email: caiyf@marineonline.com
 Customer service
-Hotline:+86 755 8829 5987
-Email:China@marineonline.com
-Address:Level 61-65 Chang Fu Jin Mao Tower, No 5 Shihua Rd, Futian District, Shenzhen, Guangdong Province, China
+Hotline: +86 755 8829 5987
+Email: China@marineonline.com
 
 Media Contact (IR/PR)
-Liaison:Tina Tsai
-Tel:+852-3551 9758
-Email:IRPR@marineonline.com
+Liaison: Tina Tsai
+Tel: +852-3551 9758
+Email: IRPR@marineonline.com
 Customer service
-Hotline:+852 2834 3188
-Email:CustomerCare@marineonline.com
-Address:33/F, 118 Connaught Road West, Sheung Wan, Hong Kong
+Hotline: +852 2834 3188
+Email: CustomerCare@marineonline.com
