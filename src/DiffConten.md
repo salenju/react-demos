@@ -181,3 +181,27 @@ May 2020
 Marine Online signed an exclusive strategic cooperation agreement with Consul-General Embassy of Panama in Singapore
 July 2020
 Marine Online GMV exceeded US$100 million; Completion of all 8 essential marine services
+
+1 Chartering
+Similar to ride hailing apps, cargo owners will be able to find suitable vessels by updating their open cargo; while shipowners who update their vessels’ open positions will be matched with suitable cargo – all these processes are completed by utilizing our smart AI engine. Both ship and cargo owners can come to an agreement online, allowing shipowners to save on commission of up to 3.75%.
+
+2 Port Agency
+Shipowners and charterers are able to find quality services in over 500 ports around the world from over 800 shipping agencies, thanks to Marine Online’s Authorized Service Provider program. 
+
+3 Bunkering
+We are able to provide shipowners with significant savings through our extensive partnership with more than 100 bunker partners; covering over 500 ports and supply services for shipowners with IFO 180, 380, 500, 700, MGO and lubricant oil products as bunkering is the major component of the vessel operating cost. In addition, we offer live bunker prices and quotations to suit all your bunker needs. Through this, shipowners are able to check oil prices at global ports in real time, receive and compare multiple quotes, as well as choose the best payment terms; breaking the traditional offline transactional model and providing more efficient services to shipowners.
+
+4 Ship Supply
+Our eCommerce platform is specially built for the shipping industry, which has a presence in over 500 ports and more than 10,000 ship suppliers globally, providing over 100,000 types of ship spare parts, stores, provisions and lubricant oil, allowing shipowners to compare and receive competitive pricing. 
+
+5 Marine Insurance
+Partnering with major insurance companies, we offer various marine insurance services, including hull insurance, P&I, cargo insurance, insurance for seafarers, amongst many others. Our team also tailors professional insurance clauses for shipowners and cargo owners, provide online insurance evaluation, insurance and follow-up claims, affording you greater convenience and cost savings compared to traditional offline insurance models offered through brokerage companies.
+
+6 Crewing
+Crewing Online is a job portal with an innovative matching system for Crew Recruitment, Crew Management, Maritime Training, crew interaction and financial remittance. This provides holistic coverage for over 1.5 million seafarers worldwide. We also partnered with reputable manning agencies and training institutes to uplift skillsets and provide more job opportunities. 
+
+7 Ship for Sale
+Our platform integrates data of more than 200,000 ships, including bulk carriers, containers, tankers, chemicals, LPG/LNG, yacht/cruise ships and offshore ships, allowing for low cost, quick transactions for the sale of second-hand ships. In addition, it also incorporates new shipbuilding services from shipyards all over the world. To facilitate these processes, other services offered include technology, valuation, financing, business negotiations, supervision of construction and delivery. 
+
+8 Marine Services
+We are able to provide shipowners with emergency maritime rescue services spanning areas, such as oil spill handling, tugboats, underwater inspections as well as helicopters from over 500 ports around the world, ensuring quick response time. Conventional maritime services such as lifesaving and firefighting equipment inspection, mechanical and electrical equipment maintenance, bunker survey, equipment calibration and certificate renewal are available as well.
