@@ -132,3 +132,53 @@ Email: IRPR@marineonline.com
 Customer service
 Hotline: +852 2834 3188
 Email: CustomerCare@marineonline.com
+
+
+
+
+
+About Us
+Marine Online is an eCommerce company, focusing on serving shipowners on all essential marine services.We integrate digital technologies, big data, and AI onto the traditional shipping industry, which enable efficiencies, leading to cost savings.With all the transaction data gathered in Marine Online's platform, we are able to develop an efficient supply chain and credit rating system.The platform aids global shipowners in resolving cash flow issues and positively drive the maritime industry into digital adaptation.
+
+8 Essential Marine Services
+Connecting global shipowners, cargo owners and suppliers
+
+Three Innovations
+Innovation
+Integrate the advanced e-commerce model into the traditional shipping industry to improve efficiency and service while reducing overall operating costs for shipowners
+
+Technology
+Introducing advanced technologies such as big data, artificial intelligence, and machine learning, Marine Online intelligently match suppliers for shipowners within minutes and seconds
+
+Financial
+Marine Online introduces credit facility to provide shipowners with marine credit. Shipowners no longer need to apply credit term separately with suppliers, which enable them to buy first and then pay later
+
+January 2017
+Commencement of Marine Online business
+March 2017
+Extensive execution of global market research and business model design
+September 2017
+Commencement of planning and designing for a business model BRD/PRD
+
+June 2018
+Established 8 major business offerings that provides one-stop service for shipowners
+October 2018
+Marine Online and 3 affiliated companies attained ISO 9001 from BV Classification Society
+December 2018
+Marine tools such as vessel search and port search services are established
+
+May 2019
+Official launched of Marine Online platform (desktop version)
+October 2019
+Marine Credit is launch to facilitate as an centralize credit facility for shipowners
+December 2019
+Marine Online launched "Global Shipowners Alliance" and "Authorized Service Providers" expanding port coverage and improve savings via volume consolidation
+
+January 2020
+Marine Online acquired the domain name
+“MarineOnline.com”
+
+May 2020
+Marine Online signed a strategic cooperation exclusive agreement with Consul-General Embassy of Panama in Singapore
+July 2020
+Marine Online GMV exceeded US$100 million; Completion of all 8 essential marine services
