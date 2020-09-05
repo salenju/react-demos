@@ -65,10 +65,10 @@ Built a strong online identity for various organizations throughout his career
 A graduate of Staffordshire University and a HubSpot certified professional
 
 Office Environment
-Marine Online provide employees with a safe and comfortable working environment in all our offices; namely Singapore, Shenzhen and Hong Kong. Our offices are located in prime locations with great views of the city’s skyline.
+Marine Online provide employees with a safe and comfortable working environment in all our offices located in Singapore, Shenzhen and Hong Kong. Our offices are located in prime locations with great views of the city’s skyline
 
 Multiculturalism
-Employees of Marine Online come from diverse cultures and nationalities. With our various backgrounds and religious beliefs, Marine Online creates a working environment that encourages the cultivation of equality, embracing the differences of one another.
+Employees of Marine Online come from diverse cultures and nationalities. With our various backgrounds and religious beliefs, Marine Online creates a working environment that encourages the cultivation of equality and embracing everyone’s differences and the benefits of diversity.
 
 Employees' Activities
 Join us
