@@ -52,6 +52,9 @@ import SkuList from './SKUList'
 import SkuList03 from './SKUList03'
 
 
+// Antd Tree demo
+import TreeDemo from './AntdTree'
+
 const Example = {
   RowCrollDemo,
   RowCrollDemo01,
@@ -73,7 +76,8 @@ const Example = {
   ReduxDemo01, ReduxDemo02, ReduxDemo03, ReduxDemo04, ReduxToDoList,
   LifeCycle,
   ProductManagement01, ProductManagement02,
-  SkuList,SkuList03
+  SkuList,SkuList03,
+  TreeDemo,
 }
 
 ReactDOM.render(<App />, document.getElementById('root'))
