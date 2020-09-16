@@ -30,6 +30,7 @@ const {
   ProductManagement02,
   SkuList,
   SkuList03,
+  SKUList03Origin,
 } = Example
 
 storiesOf('RowCroll', module)
@@ -77,5 +78,11 @@ storiesOf('SKU管理', module)
         console.log('----------->SkuList03-callback:', value)
       }
       // defaultSpecs={SKU.defaultSelect.specs}
+    />
+  ))
+  .add('方案-3源码', () => (
+    <SKUList03Origin
+      specList={SKU.specList2}
+      specCombinationList={SKU.specCombinationList2}
     />
   ))

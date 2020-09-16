@@ -67,7 +67,7 @@ export const getSpecCombinationList = (SKU_LIST) => {
     item.specs = getCombinationSpecs(sku.specs, SKU_LIST)
     specCombinationList.push(item)
   })
-  console.log('------------->>>getSpecCombinationList:', specCombinationList)
+  console.log('-->>>getSpecCombinationList:', specCombinationList)
 
   return specCombinationList
 }
