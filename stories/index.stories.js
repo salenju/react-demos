@@ -2,6 +2,11 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 
 import Example from '../src'
+import SKU from './Mock/SKU/SKU'
+import {
+  getSpecList,
+  getSpecCombinationList,
+} from './Mock/SKU/exchange-sku-list'
 
 const {
   RowCrollDemo,
@@ -21,8 +26,12 @@ const {
   ClassComponent,
   LocalClock,
   LifeCycle,
-  ProductManagement01,ProductManagement02,
-  SKUList01,
+  ProductManagement01,
+  ProductManagement02,
+  SkuList,
+  SKUList03,
+  SKUList04,
+  SKUList03Orign,
 } = Example
 
 storiesOf('RowCroll', module)
@@ -56,8 +65,31 @@ storiesOf('React原理', module)
   .add('生命周期', () => <LifeCycle />)
 
 storiesOf('商品管理界面', module)
-.add('方案-1', () => <ProductManagement01 />)
-.add('方案-2', () => <ProductManagement02 />)
+  .add('方案-1', () => <ProductManagement01 />)
+  .add('方案-2', () => <ProductManagement02 />)
 
 storiesOf('SKU管理', module)
-.add('方案-1', () => <SKUList01 />)
+  .add('方案-1', () => <SkuList />)
+  .add('方案-3 orign', () => (
+    <SKUList03Orign
+      specList={getSpecList(SKU.SKU_LIST)}
+      specCombinationList={getSpecCombinationList(SKU.SKU_LIST)}
+      // defaultSelect={SKU.defaultSelect}
+      callback={(value) =>
+        console.log('----------->SkuList03-callback:', value)
+      }
+      // defaultSpecs={SKU.defaultSelect.specs}
+    />
+  ))
+  .add('方案-3 ', () => (
+    <SKUList03
+      specList={SKU.specList2}
+      specCombinationList={SKU.specCombinationList2}
+    />
+  ))
+  .add('方案-4 ', () => (
+    <SKUList04
+      specList={SKU.specList2}
+      specCombinationList={SKU.specCombinationList2}
+    />
+  ))
