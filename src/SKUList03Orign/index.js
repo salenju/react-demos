@@ -4,47 +4,27 @@ import './spec.css'
 const classNames = require('classnames')
 
 const Spec = (props) => {
-  const { specList, specCombinationList } = props
+  const {
+    specList,
+    specCombinationList,
+    defaultSelect,
+    callback,
+    defaultSpecs,
+  } = props
 
   // 已选择的规格，长度为规格列表的长度
-  const [specsS, setSpecsS] = useState(Array(specList.length).fill(''))
-  const [matchSpec, setMatchSpec] = useState()
+  const [specsS, setSpecsS] = useState(
+    defaultSpecs ? defaultSpecs : Array(specList.length).fill('')
+  )
+  const [matchSpec, setMatchSpec] = useState(defaultSelect)
 
   // 创建一个规格矩阵
   const specAdjoinMatrix = useMemo(
     () => new SpecAdjoinMatrix(specList, specCombinationList),
     [specList, specCombinationList]
   )
-
-  const getSpecscOptions = (specsS, specCombinationList, specList) => {
-    let tarArr = []
-    let _specsS = specsS.filter((item) => item)
-    if (specsS.some(Boolean)) {
-      // 获取可选项（交集）
-      specCombinationList.forEach((item) => {
-        let tag = _specsS.every((selectedSpec) => item.specs.includes(selectedSpec))
-        if (tag) {
-          if (_specsS.length === 1) {
-            specList.forEach((spec) => {
-              spec.list.includes(_specsS[0])
-                ? (tarArr = [...tarArr, ...item.specs, ...spec.list])
-                : (tarArr = [...tarArr, ...item.specs])
-            })
-          } else {
-            tarArr = [...tarArr, ...item.specs]
-          }
-        }
-      })
-    } else {
-      // 所有可选项
-      specList.forEach((item) => (tarArr = [...tarArr, ...item.list]))
-    }
-    return tarArr
-  }
-
   // 获得可选项表
-  // const optionSpecs = specAdjoinMatrix.getSpecscOptions(specsS)
-  const optionSpecs = getSpecscOptions(specsS, specCombinationList, specList)
+  const optionSpecs = specAdjoinMatrix.getSpecscOptions(specsS)
 
   const handleClick = function (bool, text, index) {
     // 排除可选规格里面没有的规格
@@ -56,9 +36,11 @@ const Spec = (props) => {
 
   useEffect(() => {
     const _matchSpec = specCombinationList.find(
-      (item) => item.specs.join(',') === specsS.join(',')
+    (item) => item.specs.join(',') === specsS.join(',')
     )
     console.log('--------->>>>_matchSpec', _matchSpec)
+
+    callback(_matchSpec)
     setMatchSpec(_matchSpec)
   }, [specsS, specCombinationList])
 
@@ -66,6 +48,10 @@ const Spec = (props) => {
     if (!val1 || !val2) {
       return false
     }
+    console.log(
+      '--------->>>>isEquel-55555',
+      val1.sort().join('_') === val2.sort().join('_')
+    )
 
     return val1.sort().join('_') === val2.sort().join('_')
   }

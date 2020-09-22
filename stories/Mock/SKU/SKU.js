@@ -13,6 +13,30 @@ SKU.specList2 = [
   { title: 'Color', list: ['Red', 'Blue'] },
 ]
 
+SKU.specList3 = [
+  { title: 'Port', list: ['China'] },
+  { title: 'UOM', list: ['Pair'] },
+  { title: 'Color', list: ['黑色橘线'] },
+  {
+    title: 'Size',
+    list: [
+      '44码',
+      '37码',
+      '41码',
+      '38码',
+      '35码',
+      '43码',
+      '39码',
+      '42码',
+      '36码',
+      '46码',
+      '40码',
+      '45码',
+    ],
+  },
+  { title: 'Materials', list: ['超纤革鞋面、普通橡胶底'] },
+]
+
 SKU.specCombinationList = [
   {
     id: '1',
@@ -38,7 +62,7 @@ SKU.specCombinationList2 = [
     id: '319664716748298728',
     priceType: 'QUOTE',
     maxPrice: null,
-    specs: ['Dalian', 'Case', '泰国芒果','Red']
+    specs: ['Dalian', 'Case', '泰国芒果', 'Red'],
   },
   {
     id: '319664716748167656',
@@ -46,7 +70,15 @@ SKU.specCombinationList2 = [
     msrp: 6,
     priceType: 'FIXED',
     maxPrice: null,
-    specs: ['Shenzhen', 'Kilogram', '泰国芒果','Red']
+    specs: ['Shenzhen', 'Kilogram', '泰国芒果', 'Red'],
+  },
+  {
+    id: '319664716748167646',
+    price: 2.27,
+    msrp: 6,
+    priceType: 'FIXED',
+    maxPrice: null,
+    specs: ['Shenzhen', 'Kilogram', '泰国芒果', 'Blue'],
   },
   {
     id: '319643639783627240',
@@ -54,14 +86,14 @@ SKU.specCombinationList2 = [
     msrp: 30,
     priceType: 'RANGE',
     maxPrice: 25,
-    specs: ['Shenzhen', 'Bag', '澳芒','Blue']
+    specs: ['Shenzhen', 'Bag', '澳芒', 'Blue'],
   },
   {
     id: '319664716748233192',
     price: 22.73,
     priceType: 'RANGE',
     maxPrice: 28.41,
-    specs: ['Singapore', 'Bag', '泰国芒果','Blue']
+    specs: ['Singapore', 'Bag', '泰国芒果', 'Blue'],
   },
   {
     id: '319643639783496168',
@@ -69,7 +101,7 @@ SKU.specCombinationList2 = [
     msrp: 30,
     priceType: 'FIXED',
     maxPrice: null,
-    specs: ['Dalian', 'Box', '澳芒','Blue']
+    specs: ['Dalian', 'Box', '澳芒', 'Blue'],
   },
   {
     id: '319643639783365096',
@@ -77,8 +109,107 @@ SKU.specCombinationList2 = [
     msrp: 30,
     priceType: 'FIXED',
     maxPrice: null,
-    specs: ['Singapore', 'Box', '澳芒','Blue']
-  }
+    specs: ['Singapore', 'Box', '澳芒', 'Blue'],
+  },
+]
+
+SKU.specCombinationList3 = [
+  {
+    id: '319100479428696552',
+    price: 44,
+    msrp: 5.7,
+    priceType: 'Fixed',
+    maxPrice: null,
+    specs: ['China', 'Pair', '黑色橘线', '44码', '超纤革鞋面、普通橡胶底'],
+  },
+  {
+    id: '319100479529359848',
+    price: 37,
+    msrp: 5.7,
+    priceType: 'Fixed',
+    maxPrice: null,
+    specs: ['China', 'Pair', '黑色橘线', '37码', '超纤革鞋面、普通橡胶底'],
+  },
+  {
+    id: '319100479613245928',
+    price: 41,
+    msrp: 5.7,
+    priceType: 'Fixed',
+    maxPrice: null,
+    specs: ['China', 'Pair', '黑色橘线', '41码', '超纤革鞋面、普通橡胶底'],
+  },
+  {
+    id: '319100479713909224',
+    price: 38,
+    msrp: 5.7,
+    priceType: 'Fixed',
+    maxPrice: null,
+    specs: ['China', 'Pair', '黑色橘线', '38码', '超纤革鞋面、普通橡胶底'],
+  },
+  {
+    id: '319100479814572520',
+    price: 35,
+    msrp: 5.7,
+    priceType: 'Fixed',
+    maxPrice: null,
+    specs: ['China', 'Pair', '黑色橘线', '35码', '超纤革鞋面、普通橡胶底'],
+  },
+  {
+    id: '319100479915235816',
+    price: 43,
+    msrp: 5.7,
+    priceType: 'Fixed',
+    maxPrice: null,
+    specs: ['China', 'Pair', '黑色橘线', '43码', '超纤革鞋面、普通橡胶底'],
+  },
+  {
+    id: '319100478824716776',
+    price: 39,
+    msrp: 5.7,
+    priceType: 'Fixed',
+    maxPrice: null,
+    specs: ['China', 'Pair', '黑色橘线', '39码', '超纤革鞋面、普通橡胶底'],
+  },
+  {
+    id: '319100478925380072',
+    price:42,
+    msrp: 5.7,
+    priceType: 'Fixed',
+    maxPrice: null,
+    specs: ['China', 'Pair', '黑色橘线', '42码', '超纤革鞋面、普通橡胶底'],
+  },
+  {
+    id: '319100479026043368',
+    price: 36,
+    msrp: 5.7,
+    priceType: 'Fixed',
+    maxPrice: null,
+    specs: ['China', 'Pair', '黑色橘线', '36码', '超纤革鞋面、普通橡胶底'],
+  },
+  {
+    id: '319100479126706664',
+    price: 46,
+    msrp: 5.7,
+    priceType: 'Fixed',
+    maxPrice: null,
+    specs: ['China', 'Pair', '黑色橘线', '46码', '超纤革鞋面、普通橡胶底'],
+  },
+  {
+    id: '319100479227369960',
+    price: 40,
+    msrp: 5.7,
+    priceType: 'Fixed',
+    maxPrice: null,
+    specs: ['China', 'Pair', '黑色橘线', '40码', '超纤革鞋面、普通橡胶底'],
+  },
+  {
+    id: '319100479328033256',
+    price: 45,
+    msrp: 5.7,
+    priceType: 'Fixed',
+    maxPrice: null,
+    specs: ['China', 'Pair', '黑色橘线', '45码', '超纤革鞋面、普通橡胶底'],
+  },
 ]
 
 SKU.defaultSelect = {
@@ -394,5 +525,7 @@ SKU.SKU_LIST2 = [
     isCountry: '0',
   },
 ]
+
+SKU.SKU_LIST3 = []
 
 export default SKU

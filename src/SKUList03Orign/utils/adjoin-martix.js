@@ -79,8 +79,6 @@ export default class AdjoinMatrix {
    */
   getUnions(params) {
     const paramsColSum = this.getColSum(params)
-    console.log('--------_>>>>>this.vertex:',this.vertex)
-    console.log('--------_>>>>>paramsColSum:',paramsColSum)
     let unions = []
     paramsColSum.forEach((item, index) => {
       if (item >= params.length && this.vertex[index])

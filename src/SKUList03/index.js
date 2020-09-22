@@ -4,27 +4,61 @@ import './spec.css'
 const classNames = require('classnames')
 
 const Spec = (props) => {
-  const {
-    specList,
-    specCombinationList,
-    defaultSelect,
-    callback,
-    defaultSpecs,
-  } = props
+  const { specList, specCombinationList } = props
 
   // 已选择的规格，长度为规格列表的长度
-  const [specsS, setSpecsS] = useState(
-    defaultSpecs ? defaultSpecs : Array(specList.length).fill('')
-  )
-  const [matchSpec, setMatchSpec] = useState(defaultSelect)
+  const [specsS, setSpecsS] = useState(Array(specList.length).fill(''))
+  const [matchSpec, setMatchSpec] = useState()
+  const [optionSpecs, setOptionSpecs] = useState([])
 
   // 创建一个规格矩阵
   const specAdjoinMatrix = useMemo(
     () => new SpecAdjoinMatrix(specList, specCombinationList),
     [specList, specCombinationList]
   )
+
+  const getSpecscOptions = (specsS, specCombinationList, specList) => {
+    let tarArr = []
+    let _specsS = specsS.filter((item) => item)
+    if (specsS.some(Boolean)) {
+      if (_specsS.length === specsS.length) {
+        return setOptionSpecs
+      }
+
+      // 获取可选项（交集）
+      specCombinationList.forEach((item) => {
+        let tag = _specsS.every((selectedSpec) =>
+          item.specs.includes(selectedSpec)
+        )
+        if (tag) {
+          if (_specsS.length === 1) {
+            specList.forEach((spec) => {
+              spec.list.includes(_specsS[0])
+                ? (tarArr = [...tarArr, ...item.specs, ...spec.list])
+                : (tarArr = [...tarArr, ...item.specs])
+            })
+          } else {
+            tarArr = [...tarArr, ...item.specs]
+          }
+        }
+      })
+    } else {
+      // 所有可选项
+      specList.forEach((item) => (tarArr = [...tarArr, ...item.list]))
+    }
+
+    let _tarArr = new Set(tarArr)
+    return [..._tarArr]
+  }
+
   // 获得可选项表
-  const optionSpecs = specAdjoinMatrix.getSpecscOptions(specsS)
+  // const optionSpecs = specAdjoinMatrix.getSpecscOptions(specsS)
+  // const optionSpecs = getSpecscOptions(
+  //   specsS,
+  //   specCombinationList,
+  //   specList,
+  //   optionSpecs
+  // )
 
   const handleClick = function (bool, text, index) {
     // 排除可选规格里面没有的规格
@@ -36,31 +70,18 @@ const Spec = (props) => {
 
   useEffect(() => {
     const _matchSpec = specCombinationList.find(
-    (item) => item.specs.join(',') === specsS.join(',')
+      (item) => item.specs.join(',') === specsS.join(',')
     )
-    console.log('--------->>>>_matchSpec', _matchSpec)
-
-    callback(_matchSpec)
+    console.log('-->>_matchSpec', _matchSpec)
+    setOptionSpecs(getSpecscOptions(specsS, specCombinationList, specList))
     setMatchSpec(_matchSpec)
   }, [specsS, specCombinationList])
 
-  const isEquel = (val1, val2) => {
-    if (!val1 || !val2) {
-      return false
-    }
-    console.log(
-      '--------->>>>isEquel-55555',
-      val1.sort().join('_') === val2.sort().join('_')
-    )
-
-    return val1.sort().join('_') === val2.sort().join('_')
-  }
-
-  console.log('--------->>>>specList', specList)
-  console.log('--------->>>>optionSpecs', optionSpecs)
-  console.log('--------->>>>specsS', specsS)
-  console.log('--------->>>>specCombinationList', specCombinationList)
-  console.log('--------->>>>matchSpec', matchSpec)
+  console.log('-->>specList', specList)
+  console.log('-->>optionSpecs', optionSpecs)
+  console.log('-->>specsS', specsS)
+  console.log('-->>specCombinationList', specCombinationList)
+  console.log('-->>matchSpec', matchSpec)
 
   return (
     <div className="container">
@@ -69,7 +90,7 @@ const Spec = (props) => {
           <p className="title">{title}</p>
           <div className="specBox">
             {list.map((value, i) => {
-              const isOption = optionSpecs.includes(value) // 当前规格是否可选
+              const isOption = optionSpecs && optionSpecs.includes(value) // 当前规格是否可选
               const isActive = specsS.includes(value) // 当前规格是否被选
               return (
                 <span

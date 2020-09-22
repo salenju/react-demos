@@ -29,8 +29,8 @@ const {
   ProductManagement01,
   ProductManagement02,
   SkuList,
-  SkuList03,
-  SKUList03Origin,
+  SKUList03,
+  SKUList03Orign,
 } = Example
 
 storiesOf('RowCroll', module)
@@ -69,8 +69,8 @@ storiesOf('商品管理界面', module)
 
 storiesOf('SKU管理', module)
   .add('方案-1', () => <SkuList />)
-  .add('方案-3', () => (
-    <SkuList03
+  .add('方案-3 orign', () => (
+    <SKUList03Orign
       specList={getSpecList(SKU.SKU_LIST)}
       specCombinationList={getSpecCombinationList(SKU.SKU_LIST)}
       // defaultSelect={SKU.defaultSelect}
@@ -80,8 +80,8 @@ storiesOf('SKU管理', module)
       // defaultSpecs={SKU.defaultSelect.specs}
     />
   ))
-  .add('方案-3源码', () => (
-    <SKUList03Origin
+  .add('方案-3 ', () => (
+    <SKUList03
       specList={SKU.specList2}
       specCombinationList={SKU.specCombinationList2}
     />

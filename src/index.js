@@ -49,8 +49,8 @@ import ProductManagement02 from './ProductManagement/Demo02'
 
 // SKUList
 import SkuList from './SKUList'
-import SkuList03 from './SKUList03'
-import SKUList03Origin from './SKUList03Origin'
+import SKUList03Orign from './SKUList03Orign'
+import SKUList03 from './SKUList03'
 
 
 // Antd Tree demo
@@ -77,7 +77,7 @@ const Example = {
   ReduxDemo01, ReduxDemo02, ReduxDemo03, ReduxDemo04, ReduxToDoList,
   LifeCycle,
   ProductManagement01, ProductManagement02,
-  SkuList,SkuList03,SKUList03Origin,
+  SkuList,SKUList03,SKUList03Orign,
   TreeDemo,
 }
 
