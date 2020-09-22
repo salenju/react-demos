@@ -31,6 +31,7 @@ const {
   SkuList,
   SKUList03,
   SKUList04,
+  SKUList05,
   SKUList03Orign,
 } = Example
 
@@ -89,6 +90,12 @@ storiesOf('SKU管理', module)
   ))
   .add('方案-4 ', () => (
     <SKUList04
+      specList={SKU.specList2}
+      specCombinationList={SKU.specCombinationList2}
+    />
+  ))
+  .add('方案-5 ', () => (
+    <SKUList05
       specList={SKU.specList2}
       specCombinationList={SKU.specCombinationList2}
     />
