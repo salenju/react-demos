@@ -1,5 +1,4 @@
-import React, { useState, useMemo, useEffect } from 'react'
-import SpecAdjoinMatrix from './utils/spec-adjoin-martix'
+import React, { useState, useEffect, useDebugValue } from 'react'
 import './spec.css'
 const classNames = require('classnames')
 
@@ -11,31 +10,24 @@ const Spec = (props) => {
   const [matchSpec, setMatchSpec] = useState()
   const [optionSpecs, setOptionSpecs] = useState([])
 
-  // 创建一个规格矩阵
-  const specAdjoinMatrix = useMemo(
-    () => new SpecAdjoinMatrix(specList, specCombinationList),
-    [specList, specCombinationList]
-  )
-
-  const getSpecscOptions = (specsS, specCombinationList, specList) => {
+  // 获得可选项表
+  const getSpecscOptions = (specsS, index) => {
+    setSpecsS([...specsS])
     let tarArr = []
     let _specsS = specsS.filter((item) => item)
+    let _specsArr = Array(specList.length).fill('')
     if (specsS.some(Boolean)) {
-      if (_specsS.length === specsS.length) {
-        return setOptionSpecs
-      }
-
-      // 获取可选项（交集）
+      let tag = 0
       specCombinationList.forEach((item) => {
-        let tag = _specsS.every((selectedSpec) =>
+        let include = _specsS.every((selectedSpec) =>
           item.specs.includes(selectedSpec)
         )
-      //   let tag = _specsS.some((selectedSpec) =>
-      //   item.specs.includes(selectedSpec)
-      // )
-        if (tag) {
+
+        // 有匹配数据
+        if (include) {
+          tag += 1
           if (_specsS.length === 1) {
-            specList.forEach((spec) => {
+            specList.forEach((spec, index) => {
               spec.list.includes(_specsS[0])
                 ? (tarArr = [...tarArr, ...item.specs, ...spec.list])
                 : (tarArr = [...tarArr, ...item.specs])
@@ -45,8 +37,15 @@ const Spec = (props) => {
           }
         }
       })
+
+      if (!tag) {
+        _specsArr[index] = specsS[index]
+        const RR = getSpecscOptions(_specsArr)
+        return RR
+        // debugger
+      }
     } else {
-      // 所有可选项
+      // 一个都未选中的时候，展示所有可选项
       specList.forEach((item) => (tarArr = [...tarArr, ...item.list]))
     }
 
@@ -54,37 +53,31 @@ const Spec = (props) => {
     return [..._tarArr]
   }
 
-  // 获得可选项表
-  // const optionSpecs = specAdjoinMatrix.getSpecscOptions(specsS)
-  // const optionSpecs = getSpecscOptions(
-  //   specsS,
-  //   specCombinationList,
-  //   specList,
-  //   optionSpecs
-  // )
-
   const handleClick = function (bool, text, index) {
     // 排除可选规格里面没有的规格
     if (specsS[index] !== text && !bool) return
     // 根据text判断是否已经被选中了
     specsS[index] = specsS[index] === text ? '' : text
-    setSpecsS(specsS.slice())
+    setOptionSpecs(getSpecscOptions(specsS.slice(), index))
+    // setSpecsS(specsS.slice())
   }
+  useEffect(() => {
+    setOptionSpecs(getSpecscOptions(specsS))
+  }, [])
 
   useEffect(() => {
     const _matchSpec = specCombinationList.find(
       (item) => item.specs.join(',') === specsS.join(',')
     )
-    console.log('-->>_matchSpec', _matchSpec)
-    setOptionSpecs(getSpecscOptions(specsS, specCombinationList, specList))
     setMatchSpec(_matchSpec)
+    // setOptionSpecs(getSpecscOptions(specsS))
   }, [specsS, specCombinationList])
 
-  console.log('-->>specList', specList)
+  // console.log('-->>specList', specList)
   console.log('-->>optionSpecs', optionSpecs)
-  console.log('-->>specsS', specsS)
-  console.log('-->>specCombinationList', specCombinationList)
-  console.log('-->>matchSpec', matchSpec)
+  // console.log('-->>specsS', specsS)
+  // console.log('-->>specCombinationList', specCombinationList)
+  // console.log('-->>matchSpec', matchSpec)
 
   return (
     <div className="container">
@@ -103,7 +96,7 @@ const Spec = (props) => {
                     specAction: isActive,
                     specDisabled: !isOption,
                   })}
-                  onClick={() => handleClick(isOption, value, index)}
+                  onClick={() => handleClick(true, value, index)}
                 >
                   {value}
                 </span>
