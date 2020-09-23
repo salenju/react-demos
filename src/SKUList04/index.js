@@ -26,15 +26,24 @@ const Spec = (props) => {
         // 有匹配数据
         if (include) {
           tag += 1
-          if (_specsS.length === 1) {
-            specList.forEach((spec, index) => {
-              spec.list.includes(_specsS[0])
-                ? (tarArr = [...tarArr, ...item.specs, ...spec.list])
-                : (tarArr = [...tarArr, ...item.specs])
-            })
-          } else {
-            tarArr = [...tarArr, ...item.specs]
-          }
+
+          // V1
+          // if (_specsS.length === 1) {
+          //   specList.forEach((spec, index) => {
+          //     spec.list.includes(_specsS[0])
+          //       ? (tarArr = [...tarArr, ...item.specs, ...spec.list])
+          //       : (tarArr = [...tarArr, ...item.specs])
+          //   })
+          // } else {
+          //   tarArr = [...tarArr, ...item.specs]
+          // }
+
+        // V2
+        specList.forEach((spec, index) => {
+          spec.list.includes(specsS[index])
+            ? (tarArr = [...tarArr, ...item.specs, ...spec.list])
+            : (tarArr = [...tarArr, ...item.specs])
+        })
         }
       })
 

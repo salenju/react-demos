@@ -81,13 +81,13 @@ storiesOf('SKU管理', module)
       // defaultSpecs={SKU.defaultSelect.specs}
     />
   ))
-  .add('方案-3 ', () => (
+  .add('方案-3-淘宝 ', () => (
     <SKUList03
-      specList={SKU.specList2}
-      specCombinationList={SKU.specCombinationList2}
+      specList={SKU.specList3}
+      specCombinationList={SKU.specCombinationList3}
     />
   ))
-  .add('方案-4 ', () => (
+  .add('方案-4-京东', () => (
     <SKUList04
       specList={SKU.specList2}
       specCombinationList={SKU.specCombinationList2}

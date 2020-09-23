@@ -34,7 +34,7 @@ SKU.specList3 = [
       '45码',
     ],
   },
-  { title: 'Materials', list: ['超纤革鞋面、普通橡胶底'] },
+  { title: 'Materials', list: ['超纤革鞋面、普通橡胶底','普通橡胶底'] },
 ]
 
 SKU.specCombinationList = [
@@ -60,6 +60,7 @@ SKU.specCombinationList = [
 SKU.specCombinationList2 = [
   {
     id: '319664716748298728',
+    price: 1.27,
     priceType: 'QUOTE',
     maxPrice: null,
     specs: ['Dalian', 'Case', '泰国芒果', 'Red'],
@@ -128,7 +129,7 @@ SKU.specCombinationList3 = [
     msrp: 5.7,
     priceType: 'Fixed',
     maxPrice: null,
-    specs: ['China', 'Pair', '黑色橘线', '37码', '超纤革鞋面、普通橡胶底'],
+    specs: ['China', 'Pair', '黑色橘线', '37码', '普通橡胶底'],
   },
   {
     id: '319100479613245928',

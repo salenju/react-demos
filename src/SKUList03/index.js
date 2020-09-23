@@ -30,9 +30,6 @@ const Spec = (props) => {
         let tag = _specsS.every((selectedSpec) =>
           item.specs.includes(selectedSpec)
         )
-      //   let tag = _specsS.some((selectedSpec) =>
-      //   item.specs.includes(selectedSpec)
-      // )
         if (tag) {
           if (_specsS.length === 1) {
             specList.forEach((spec) => {
