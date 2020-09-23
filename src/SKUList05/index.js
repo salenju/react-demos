@@ -5,100 +5,57 @@ import './spec.css'
 function fetchData() {
   return [
     {
-      id: '319100479428696552',
-      price: 44,
-      msrp: 5.7,
-      priceType: 'Fixed',
+      id: '319664716748298728',
+      priceType: 'QUOTE',
       maxPrice: null,
-      specs: ['China1', 'Pair', '黑色橘线', '44码', '超纤革鞋面、普通橡胶底'],
+      specs: ['Dalian', 'Case', '泰国芒果', 'Red'],
     },
     {
-      id: '319100479529359848',
-      price: 37,
-      msrp: 5.7,
-      priceType: 'Fixed',
+      id: '319664716748167656',
+      price: 2.27,
+      msrp: 6,
+      priceType: 'FIXED',
       maxPrice: null,
-      specs: ['China', 'Pair', '黑色橘线', '37码', '超纤革鞋面、普通橡胶底'],
+      specs: ['Shenzhen', 'Kilogram', '泰国芒果', 'Red'],
     },
     {
-      id: '319100479613245928',
-      price: 41,
-      msrp: 5.7,
-      priceType: 'Fixed',
+      id: '319664716748167646',
+      price: 2.27,
+      msrp: 6,
+      priceType: 'FIXED',
       maxPrice: null,
-      specs: ['China', 'Pair', '黑色橘线', '41码', '超纤革鞋面、普通橡胶底'],
+      specs: ['Shenzhen', 'Kilogram', '泰国芒果', 'Blue'],
     },
     {
-      id: '319100479713909224',
-      price: 38,
-      msrp: 5.7,
-      priceType: 'Fixed',
-      maxPrice: null,
-      specs: ['China', 'Pair', '黑色橘线', '38码', '超纤革鞋面、普通橡胶底'],
+      id: '319643639783627240',
+      price: 20.45,
+      msrp: 30,
+      priceType: 'RANGE',
+      maxPrice: 25,
+      specs: ['Shenzhen', 'Bag', '澳芒', 'Blue'],
     },
     {
-      id: '319100479814572520',
-      price: 35,
-      msrp: 5.7,
-      priceType: 'Fixed',
-      maxPrice: null,
-      specs: ['China', 'Pair', '黑色橘线', '35码', '超纤革鞋面、普通橡胶底'],
+      id: '319664716748233192',
+      price: 22.73,
+      priceType: 'RANGE',
+      maxPrice: 28.41,
+      specs: ['Singapore', 'Bag', '泰国芒果', 'Blue'],
     },
     {
-      id: '319100479915235816',
-      price: 43,
-      msrp: 5.7,
-      priceType: 'Fixed',
+      id: '319643639783496168',
+      price: 22.73,
+      msrp: 30,
+      priceType: 'FIXED',
       maxPrice: null,
-      specs: ['China', 'Pair', '黑色橘线', '43码', '超纤革鞋面、普通橡胶底'],
+      specs: ['Dalian', 'Box', '澳芒', 'Blue'],
     },
     {
-      id: '319100478824716776',
-      price: 39,
-      msrp: 5.7,
-      priceType: 'Fixed',
+      id: '319643639783365096',
+      price: 25,
+      msrp: 30,
+      priceType: 'FIXED',
       maxPrice: null,
-      specs: ['China', 'Pair', '黑色橘线', '39码', '超纤革鞋面、普通橡胶底'],
-    },
-    {
-      id: '319100478925380072',
-      price: 42,
-      msrp: 5.7,
-      priceType: 'Fixed',
-      maxPrice: null,
-      specs: ['China', 'Pair', '黑色橘线', '42码', '超纤革鞋面、普通橡胶底'],
-    },
-    {
-      id: '319100479026043368',
-      price: 36,
-      msrp: 5.7,
-      priceType: 'Fixed',
-      maxPrice: null,
-      specs: ['China', 'Pair', '黑色橘线', '36码', '超纤革鞋面、普通橡胶底'],
-    },
-    {
-      id: '319100479126706664',
-      price: 46,
-      msrp: 5.7,
-      priceType: 'Fixed',
-      maxPrice: null,
-      specs: ['China', 'Pair', '黑色橘线', '46码', '超纤革鞋面、普通橡胶底'],
-    },
-    {
-      id: '319100479227369960',
-      price: 40,
-      msrp: 5.7,
-      priceType: 'Fixed',
-      maxPrice: null,
-      specs: ['China', 'Pair', '黑色橘线', '40码', '超纤革鞋面、普通橡胶底'],
-    },
-    {
-      id: '319100479328033256',
-      price: 45,
-      msrp: 5.7,
-      priceType: 'Fixed',
-      maxPrice: null,
-      specs: ['China', 'Pair', '黑色橘线', '45码', '超纤革鞋面、普通橡胶底'],
+      specs: ['Singapore', 'Box', '澳芒', 'Blue'],
     },
   ]
 }
@@ -128,13 +85,12 @@ export default function App() {
           }
         })
       })
-
       return skuMap
     }
     return []
   }, [])
 
-  // 所有在售商品的 skuMap
+  // 所有在售商品的 skuMap-----可动态传入
   const skuMap = useMemo(() => {
     if (goods.length) {
       const t = goods2skuMap(goods)
@@ -180,7 +136,6 @@ export default function App() {
         } else {
           // 多sku
           const list = matchGoodsFnc(arr)
-          console.log('----->>onSkuClick-list:',list)
           setMatchGoods(list)
           const arr2d = goods2skuMap(list)
           arr.forEach((item, j) => {
@@ -212,16 +167,19 @@ export default function App() {
       <div>{goods.length}</div>
       <div>已选sku：{JSON.stringify(selectedSkuArr)}</div>
       <div>匹配商品sku: {JSON.stringify(matchSkuMap)}</div>
+      <div>可选的sku: {JSON.stringify(unite.flat(2))}</div>
+      <div>skuMap: {JSON.stringify(skuMap)}</div>
       {skuMap.map((arr, index) => {
         return (
           <div key={`arr${index}`}>
             {arr.map((sku) => {
+              const isOption = unite.flat(2).includes(sku) // 当前规格是否可选
               return (
                 <span
                   key={`sku${sku}`}
                   className={`sku-item ${
                     selectedSkuArr.includes(sku) ? 'sku-item-active' : ''
-                  }`}
+                  } ${!isOption ? 'sku-item-disable' : ''}`}
                   onClick={() => onSkuClick(sku, arr, index, skuMap)}
                 >
                   {sku}
