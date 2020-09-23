@@ -94,4 +94,9 @@ storiesOf('SKU管理', module)
       specCombinationList={SKU.specCombinationList2}
     />
   ))
-  .add('方案-5-淘宝 ', () => <SKUList05 data={SKU.productData} />)
+  .add('方案-5-淘宝 ', () => (
+    <SKUList05
+      specList={SKU.specList2}
+      specCombinationList={SKU.specCombinationList2}
+    />
+  ))

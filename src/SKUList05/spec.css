@@ -39,4 +39,25 @@
   .mrsp {
     text-decoration: line-through;
   }
+
+  .sku-item {
+    display: inline-block;
+    padding: 5px;
+    border: 1px solid #ccc;
+    margin: 5px 3px;
+    cursor: pointer;
+    background-color: #f3f3f3;
+    color: #505257;
+  }
+  .sku-item-active {
+    background-color: pink;
+    background-color: #fef6f4;
+    color: #e34a40;
+    border: 1px solid #e34a40;
+  }
+
+  .sku-item-disable {
+    background-color: #f3f3f3;
+    color: #bebebe;
+  }
   
