@@ -58,6 +58,10 @@ import SKUList05 from './SKUList05'
 // Antd Tree demo
 import TreeDemo from './AntdTree'
 
+
+// Antd Mobile
+import AMInput from './AntdMobile/Input'
+
 const Example = {
   RowCrollDemo,
   RowCrollDemo01,
@@ -81,6 +85,7 @@ const Example = {
   ProductManagement01, ProductManagement02,
   SkuList,SKUList03,SKUList03Orign,SKUList04,SKUList05,
   TreeDemo,
+  AMInput,
 }
 
 ReactDOM.render(<App />, document.getElementById('root'))
