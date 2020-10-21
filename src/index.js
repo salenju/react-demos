@@ -57,6 +57,11 @@ import SKUList04 from './SKUList04'
 // Antd Tree demo
 import TreeDemo from './AntdTree'
 
+// ImgLazyload
+import ImgLazyload from './ImgLazyload'
+
+import AddToCartBtn from './AddToCartBtn'
+
 const Example = {
   RowCrollDemo,
   RowCrollDemo01,
@@ -80,6 +85,8 @@ const Example = {
   ProductManagement01, ProductManagement02,
   SkuList,SKUList03,SKUList03Orign,SKUList04,
   TreeDemo,
+  ImgLazyload,
+  AddToCartBtn,
 }
 
 ReactDOM.render(<App />, document.getElementById('root'))

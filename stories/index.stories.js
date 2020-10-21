@@ -32,6 +32,8 @@ const {
   SKUList03,
   SKUList04,
   SKUList03Orign,
+  ImgLazyload,
+  AddToCartBtn,
 } = Example
 
 storiesOf('RowCroll', module)
@@ -64,6 +66,8 @@ storiesOf('React原理', module)
   .add('LocalClock', () => <LocalClock />)
   .add('生命周期', () => <LifeCycle />)
 
+storiesOf('图片懒加载', module).add('ImgLazyload', () => <ImgLazyload />)
+
 storiesOf('商品管理界面', module)
   .add('方案-1', () => <ProductManagement01 />)
   .add('方案-2', () => <ProductManagement02 />)
@@ -93,3 +97,5 @@ storiesOf('SKU管理', module)
       specCombinationList={SKU.specCombinationList2}
     />
   ))
+
+storiesOf('动态效果', module).add('加入购物车', () => <AddToCartBtn />)

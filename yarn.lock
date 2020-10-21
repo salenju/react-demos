@@ -11668,6 +11668,11 @@ react-lazy-load@^3.0.13:
     lodash.throttle "^4.0.0"
     prop-types "^15.5.8"
 
+react-lazyload@^3.0.0:
+  version "3.0.0"
+  resolved "http://nexus.pm.emarineonline.com/repository/npm_group/react-lazyload/-/react-lazyload-3.0.0.tgz#f9741daa823d95ddb4dd59527ca6b8845d1b4c3e"
+  integrity sha1-+XQdqoI9ld203VlSfKa4hF0bTD4=
+
 react-lifecycles-compat@^3.0.2, react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "http://nexus.pm.emarineonline.com/repository/npm_group/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
