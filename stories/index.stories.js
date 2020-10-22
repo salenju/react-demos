@@ -34,6 +34,7 @@ const {
   SKUList03Orign,
   ImgLazyload,
   AddToCartBtn,
+  SideMenu,
 } = Example
 
 storiesOf('RowCroll', module)
@@ -99,3 +100,4 @@ storiesOf('SKU管理', module)
   ))
 
 storiesOf('动态效果', module).add('加入购物车', () => <AddToCartBtn />)
+storiesOf('Menu', module).add('Side Menu', () => <SideMenu />)
