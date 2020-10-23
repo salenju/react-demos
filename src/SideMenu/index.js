@@ -1,28 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Icon } from 'antd'
-import QRCode from 'qrcodejs2'
+import QRCode from 'qrcode.react'
 
 const SideMenu = () => {
   const backToTop = () => {
     document.body.scrollTop = 0 // For Safari
     document.documentElement.scrollTop = 0 // For Chrome, Firefox, IE and Opera
-  }
-
-  /**
-   * @description 生成二维码
-   * @param  {number} qWidth  宽度
-   * @param  {number} qHeight  高度
-   * @param  {string} qText  二维码内容（跳转连接）
-   * @param  {string} qRender 渲染方式（有两种方式 table和canvas，默认是canvas）
-   */
-  function qrcode(qWidth, qHeight, qText, qRender) {
-    let qrcode = new QRCode('qrcode', {
-      width: qWidth,
-      height: qHeight,
-      text: qText,
-      render: qRender,
-    })
   }
 
   return (
@@ -35,8 +19,11 @@ const SideMenu = () => {
           </li>
           <li>
             <Icon type="qrcode" style={{ color: '#fff' }} />
-            <div className="hidden-content qr-code" id="qrcode">
-              {qrcode(124, 124, 'https://www.baidu.com/', 'canvas')}
+            <div className="hidden-content qr-code">
+              <p className="qr-title">View in APP</p>
+              <p className="qr-image">
+                {QRCode({ value: 'https://www.marineonline.com/', size: 120 })}
+              </p>
             </div>
           </li>
           <li onClick={backToTop}>
@@ -67,22 +54,45 @@ const Wrapper = styled('div')`
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 10px 5px;
+      width: 50px;
+      height: 45px;
       margin: 0 0 2px 0;
       background: #a6a6a6;
       position: relative;
       .hidden-content {
         position: absolute;
+        display: none;
         width: 100px;
-        line-height: 42px;
+        line-height: 45px;
         text-align: center;
         background: #0089fc;
         bottom: 0;
-        display: none;
+        border-radius: 4px 0 0 4px;
+        font-size: 12px;
+        font-weight: 400;
+        color: #ffffff;
       }
       .qr-code {
-        width: 200px;
-        height: 200px;
+        text-align: center;
+        width: 120px;
+        height: 176px;
+        border-radius: 4px;
+        margin: 0 2px 0 0;
+        padding: 10px;
+        .qr-title {
+          font-size: 12px;
+          font-weight: 400;
+          color: #ffffff;
+          line-height: 12px;
+        }
+        .qr-image {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 120px;
+          height: 120px;
+          background: #ffffff;
+        }
       }
     }
     li:hover {
@@ -91,9 +101,6 @@ const Wrapper = styled('div')`
       .hidden-content {
         display: inline-block;
         right: 50px;
-      }
-      .qr-code {
-        bottom: -80px;
       }
     }
   }
