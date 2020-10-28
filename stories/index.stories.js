@@ -97,5 +97,3 @@ storiesOf('SKU管理', module)
       specCombinationList={SKU.specCombinationList2}
     />
   ))
-
-storiesOf('动态效果', module).add('加入购物车', () => <AddToCartBtn />)

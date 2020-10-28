@@ -1,9 +1,9 @@
 import axios from 'axios'
 import axiosRetry from 'axios-retry'
 import format from "string-template";
-import { Global, SCOPE } from 'bmo-global'
+// import { Global, SCOPE } from 'bmo-global'
 
-let ssoGlobal = new Global(SCOPE.SESSION, 'Sso')
+// let ssoGlobal = new Global(SCOPE.SESSION, 'Sso')
 
 /**
  * Axios
@@ -47,7 +47,8 @@ export class RestClient {
       config
     )
 
-    const globalConfig = ssoGlobal.getItem('GlobalRestClient') || {}
+    // const globalConfig = ssoGlobal.getItem('GlobalRestClient') || {}
+    const globalConfig = {}
 
     this.axiosConfig = {
       baseURL: globalConfig.baseURL || this._config.baseURL,
@@ -117,7 +118,8 @@ export class RestClient {
       },
     })
 
-    let mobileLangStorage = ssoGlobal.getItem('lng_selected')
+    // let mobileLangStorage = ssoGlobal.getItem('lng_selected')
+    let mobileLangStorage = null
     let selected_language = ''
 
     if (mobileLangStorage !== null) {

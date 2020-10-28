@@ -3,7 +3,7 @@ import { Button, Icon } from 'antd'
 import styled from 'styled-components'
 
 const AddToCartBtn = (props) => {
-  const { disabled, onClick } = props
+  const { disabled, onClick, content, clickedContent } = props
   const [dotAnimation, setDotAnimation] = useState(false)
 
   const handleClick = () => {
@@ -23,7 +23,7 @@ const AddToCartBtn = (props) => {
           style={{ color: '#ffffff', fontSize: '21px' }}
         />
       </div>
-      <p className="addToCart">ADD TO CART</p>
+      <p className="addToCart">{dotAnimation ? clickedContent : content}</p>
     </Wrapper>
   )
 }
@@ -49,8 +49,8 @@ const Wrapper = styled(Button)`
       height: 6px;
       border-radius: 50%;
       background: #ffffff;
-      margin: -3px 0 0;
-      visibility: hidden;
+      margin: 0 0 0 4px;
+      display: none;
     }
   }
   .addToCart {
@@ -63,8 +63,7 @@ const Wrapper = styled(Button)`
     background: #269afc;
     border: 1px solid #269afc;
     .dot {
-      visibility: visible;
-      margin: 6px 0 0;
+      display: block;
     }
   }
   .dot-animation {
