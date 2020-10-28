@@ -62,6 +62,8 @@ import ImgLazyload from './ImgLazyload'
 
 import AddToCartBtn from './AddToCartBtn'
 
+import SideMenu from './SideMenu'
+
 const Example = {
   RowCrollDemo,
   RowCrollDemo01,
@@ -87,6 +89,7 @@ const Example = {
   TreeDemo,
   ImgLazyload,
   AddToCartBtn,
+  SideMenu,
 }
 
 ReactDOM.render(<App />, document.getElementById('root'))

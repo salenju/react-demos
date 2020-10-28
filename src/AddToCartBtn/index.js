@@ -45,12 +45,16 @@ const Wrapper = styled(Button)`
     align-items: center;
     justify-content: center;
     .dot {
+      position: absolute;
+      top:0;
+      left: 3px;
+
       width: 6px;
       height: 6px;
       border-radius: 50%;
-      background: #ffffff;
+      /* background: #ffffff; */
+      background: #f40;
       margin: 0 0 0 4px;
-      display: none;
     }
   }
   .addToCart {
