@@ -98,9 +98,3 @@ storiesOf('SKU管理', module)
       specCombinationList={SKU.specCombinationList2}
     />
   ))
-<<<<<<< HEAD
-=======
-
-storiesOf('动态效果', module).add('加入购物车', () => <AddToCartBtn />)
-storiesOf('Menu', module).add('Side Menu', () => <SideMenu />)
->>>>>>> a805de42608710c7caaffc389f49f0d52e2328ce

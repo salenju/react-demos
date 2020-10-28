@@ -16,7 +16,8 @@ const AddToCartBtn = (props) => {
   return (
     <Wrapper disabled={disabled} onClick={handleClick}>
       <div className="icon">
-        <div className={dotAnimation ? 'dotAnimation' : 'dot'}></div>
+        <div className={dotAnimation ? 'dot dot-animation' : 'dot'}></div>
+        {/* <div className='dotAnimation'></div> */}
 
         <Icon
           type="shopping-cart"
@@ -45,16 +46,17 @@ const Wrapper = styled(Button)`
     align-items: center;
     justify-content: center;
     .dot {
-      position: absolute;
-      top:0;
-      left: 3px;
-
       width: 6px;
       height: 6px;
       border-radius: 50%;
-      /* background: #ffffff; */
-      background: #f40;
+      background: #ffffff;
       margin: 0 0 0 4px;
+      display: none;
+    }
+    .dot-animation {
+      display: block;
+      animation: hiddenDot 0.8s ease;
+      -webkit-animation: hiddenDot 0.8s ease;
     }
   }
   .addToCart {
@@ -70,19 +72,43 @@ const Wrapper = styled(Button)`
       display: block;
     }
   }
-  .dot-animation {
-    animation: hiddenDot 1.5s ease-in;
+  @keyframes hiddenDot {
+    0% {
+      margin: 0 0 0 4px;
+    }
+    20% {
+      margin: 0 0 6px 4px;
+    }
+    50% {
+      margin: 0 0 4px 4px;
+    }
+    80% {
+      margin: 0 0 -2px 4px;
+    }
+
+    100% {
+      margin: 0 0 -8px 4px;
+      display: none;
+    }
   }
 
   @keyframes hiddenDot {
-    from {
-      visibility: visible;
-      margin: 6px 0 0;
+    0% {
+      margin: 0 0 0 4px;
+    }
+    20% {
+      margin: 0 0 6px 4px;
+    }
+    50% {
+      margin: 0 0 4px 4px;
+    }
+    80% {
+      margin: 0 0 -2px 4px;
     }
 
-    to {
-      margin: -3px 0 0;
-      visibility: hidden;
+    100% {
+      margin: 0 0 -8px 4px;
+      display: none;
     }
   }
 `
