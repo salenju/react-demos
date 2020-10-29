@@ -3,7 +3,7 @@ import { Button, Icon } from 'antd'
 import styled from 'styled-components'
 
 const AddToCartBtn = (props) => {
-  const { disabled, onClick } = props
+  const { disabled, onClick, content, clickedContent } = props
   const [dotAnimation, setDotAnimation] = useState(false)
 
   const handleClick = () => {
@@ -16,14 +16,15 @@ const AddToCartBtn = (props) => {
   return (
     <Wrapper disabled={disabled} onClick={handleClick}>
       <div className="icon">
-        <div className={dotAnimation ? 'dotAnimation' : 'dot'}></div>
+        <div className={dotAnimation ? 'dot dot-animation' : 'dot'}></div>
+        {/* <div className='dotAnimation'></div> */}
 
         <Icon
           type="shopping-cart"
           style={{ color: '#ffffff', fontSize: '21px' }}
         />
       </div>
-      <p className="addToCart">ADD TO CART</p>
+      <p className="addToCart">{dotAnimation ? clickedContent : content}</p>
     </Wrapper>
   )
 }
@@ -49,8 +50,13 @@ const Wrapper = styled(Button)`
       height: 6px;
       border-radius: 50%;
       background: #ffffff;
-      margin: -3px 0 0;
-      visibility: hidden;
+      margin: 0 0 0 4px;
+      display: none;
+    }
+    .dot-animation {
+      display: block;
+      animation: hiddenDot 0.8s ease;
+      -webkit-animation: hiddenDot 0.8s ease;
     }
   }
   .addToCart {
@@ -63,23 +69,46 @@ const Wrapper = styled(Button)`
     background: #269afc;
     border: 1px solid #269afc;
     .dot {
-      visibility: visible;
-      margin: 6px 0 0;
+      display: block;
     }
   }
-  .dot-animation {
-    animation: hiddenDot 1.5s ease-in;
+  @keyframes hiddenDot {
+    0% {
+      margin: 0 0 0 4px;
+    }
+    20% {
+      margin: 0 0 6px 4px;
+    }
+    50% {
+      margin: 0 0 4px 4px;
+    }
+    80% {
+      margin: 0 0 -2px 4px;
+    }
+
+    100% {
+      margin: 0 0 -8px 4px;
+      display: none;
+    }
   }
 
   @keyframes hiddenDot {
-    from {
-      visibility: visible;
-      margin: 6px 0 0;
+    0% {
+      margin: 0 0 0 4px;
+    }
+    20% {
+      margin: 0 0 6px 4px;
+    }
+    50% {
+      margin: 0 0 4px 4px;
+    }
+    80% {
+      margin: 0 0 -2px 4px;
     }
 
-    to {
-      margin: -3px 0 0;
-      visibility: hidden;
+    100% {
+      margin: 0 0 -8px 4px;
+      display: none;
     }
   }
 `

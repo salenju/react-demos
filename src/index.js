@@ -60,7 +60,8 @@ import TreeDemo from './AntdTree'
 // ImgLazyload
 import ImgLazyload from './ImgLazyload'
 
-import AddToCartBtn from './AddToCartBtn'
+// Animation
+import AddToCartBtn from './Animation/AddToCartBtn'
 
 import SideMenu from './SideMenu'
 
