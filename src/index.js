@@ -53,7 +53,6 @@ import SKUList03Orign from './SKUList03Orign'
 import SKUList03 from './SKUList03'
 import SKUList04 from './SKUList04'
 
-
 // Antd Tree demo
 import TreeDemo from './AntdTree'
 
@@ -65,17 +64,35 @@ import AddToCartBtn from './Animation/AddToCartBtn'
 
 import SideMenu from './SideMenu'
 
+// react-chrono
+import HorizontalBasic from './ReactChrono/HorizontalBasic'
+import VerticalAlternating from './ReactChrono/VerticalAlternating'
+import VerticalAlternatingImg from './ReactChrono/VerticalAlternatingImg'
+import VerticalBasic from './ReactChrono/VerticalBasic'
+import VerticalWithMixedContent from './ReactChrono/VerticalWithMixedContent'
+
+const ReactChrono = {
+  HorizontalBasic,
+  VerticalAlternating,
+  VerticalAlternatingImg,
+  VerticalBasic,
+  VerticalWithMixedContent,
+}
+
 const Example = {
   RowCrollDemo,
   RowCrollDemo01,
   RowCrollDemo02,
   RowCrollDemo03,
   CheckBoxDemo01,
-  CallbackRef01, CallbackRef02,
-  CustomTextInput,AutoFocusTextInput,
+  CallbackRef01,
+  CallbackRef02,
+  CustomTextInput,
+  AutoFocusTextInput,
   Context01,
   Link01,
-  Router01, Router02,
+  Router01,
+  Router02,
   Computed,
   Cascader,
   AntdInput,
@@ -83,14 +100,23 @@ const Example = {
   ReactHooks,
   ClassComponent,
   LocalClock,
-  ReduxDemo01, ReduxDemo02, ReduxDemo03, ReduxDemo04, ReduxToDoList,
+  ReduxDemo01,
+  ReduxDemo02,
+  ReduxDemo03,
+  ReduxDemo04,
+  ReduxToDoList,
   LifeCycle,
-  ProductManagement01, ProductManagement02,
-  SkuList,SKUList03,SKUList03Orign,SKUList04,
+  ProductManagement01,
+  ProductManagement02,
+  SkuList,
+  SKUList03,
+  SKUList03Orign,
+  SKUList04,
   TreeDemo,
   ImgLazyload,
   AddToCartBtn,
   SideMenu,
+  ReactChrono,
 }
 
 ReactDOM.render(<App />, document.getElementById('root'))
