@@ -53,7 +53,6 @@ import SKUList03Orign from './SKUList03Orign'
 import SKUList03 from './SKUList03'
 import SKUList04 from './SKUList04'
 
-
 // Antd Tree demo
 import TreeDemo from './AntdTree'
 
@@ -62,6 +61,12 @@ import ImgLazyload from './ImgLazyload'
 
 // Animation
 import AddToCartBtn from './Animation/AddToCartBtn'
+import FixedSideMenu from './Animation/FixedSideMenu'
+
+// UploadAndDrag
+import UploadAndDrag01 from './UploadAndDrag/UploadAndDrag01'
+import UploadAndDrag02 from './UploadAndDrag/UploadAndDrag02'
+import UploadAndDrag03 from './UploadAndDrag/UploadAndDrag03'
 
 import SideMenu from './SideMenu'
 
@@ -71,11 +76,14 @@ const Example = {
   RowCrollDemo02,
   RowCrollDemo03,
   CheckBoxDemo01,
-  CallbackRef01, CallbackRef02,
-  CustomTextInput,AutoFocusTextInput,
+  CallbackRef01,
+  CallbackRef02,
+  CustomTextInput,
+  AutoFocusTextInput,
   Context01,
   Link01,
-  Router01, Router02,
+  Router01,
+  Router02,
   Computed,
   Cascader,
   AntdInput,
@@ -83,14 +91,26 @@ const Example = {
   ReactHooks,
   ClassComponent,
   LocalClock,
-  ReduxDemo01, ReduxDemo02, ReduxDemo03, ReduxDemo04, ReduxToDoList,
+  ReduxDemo01,
+  ReduxDemo02,
+  ReduxDemo03,
+  ReduxDemo04,
+  ReduxToDoList,
   LifeCycle,
-  ProductManagement01, ProductManagement02,
-  SkuList,SKUList03,SKUList03Orign,SKUList04,
+  ProductManagement01,
+  ProductManagement02,
+  SkuList,
+  SKUList03,
+  SKUList03Orign,
+  SKUList04,
   TreeDemo,
   ImgLazyload,
   AddToCartBtn,
   SideMenu,
+  FixedSideMenu,
+  UploadAndDrag01,
+  UploadAndDrag02,
+  UploadAndDrag03,
 }
 
 ReactDOM.render(<App />, document.getElementById('root'))
