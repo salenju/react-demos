@@ -1113,7 +1113,7 @@
     "@emotion/utils" "0.11.3"
     "@emotion/weak-memoize" "0.2.5"
 
-"@emotion/core@^10.0.20":
+"@emotion/core@^10.0.20", "@emotion/core@^10.0.35":
   version "10.0.35"
   resolved "https://registry.npm.taobao.org/@emotion/core/download/@emotion/core-10.0.35.tgz?cache=0&sync_timestamp=1602424730271&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40emotion%2Fcore%2Fdownload%2F%40emotion%2Fcore-10.0.35.tgz#513fcf2e22cd4dfe9d3894ed138c9d7a859af9b3"
   dependencies:
@@ -1169,7 +1169,7 @@
     "@emotion/serialize" "^0.11.15"
     "@emotion/utils" "0.11.3"
 
-"@emotion/styled@^10.0.17":
+"@emotion/styled@^10.0.17", "@emotion/styled@^10.0.27":
   version "10.0.27"
   resolved "https://registry.npm.taobao.org/@emotion/styled/download/@emotion/styled-10.0.27.tgz?cache=0&sync_timestamp=1602424739811&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40emotion%2Fstyled%2Fdownload%2F%40emotion%2Fstyled-10.0.27.tgz#12cb67e91f7ad7431e1875b1d83a94b814133eaf"
   dependencies:
@@ -7990,6 +7990,10 @@ nan@^2.12.1:
   version "2.14.2"
   resolved "https://registry.npm.taobao.org/nan/download/nan-2.14.2.tgz?cache=0&sync_timestamp=1602591684976&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fnan%2Fdownload%2Fnan-2.14.2.tgz#f5376400695168f4cc694ac9393d0c9585eeea19"
 
+nanoid@^3.1.16:
+  version "3.1.16"
+  resolved "https://registry.npm.taobao.org/nanoid/download/nanoid-3.1.16.tgz?cache=0&sync_timestamp=1603674748253&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fnanoid%2Fdownload%2Fnanoid-3.1.16.tgz#b21f0a7d031196faf75314d7c65d36352beeef64"
+
 nanomatch@^1.2.9:
   version "1.2.13"
   resolved "https://registry.npm.taobao.org/nanomatch/download/nanomatch-1.2.13.tgz#b87a8aa4fc0de8fe6be88895b38983ff265bd119"
@@ -10008,6 +10012,15 @@ react-app-rewired@^2.1.6:
   dependencies:
     semver "^5.6.0"
 
+react-chrono@^1.4.2:
+  version "1.4.2"
+  resolved "https://registry.npm.taobao.org/react-chrono/download/react-chrono-1.4.2.tgz#e889db54019eaddefcf9129d4da3f3f089f54796"
+  dependencies:
+    "@emotion/core" "^10.0.35"
+    "@emotion/styled" "^10.0.27"
+    nanoid "^3.1.16"
+    use-debounce "^5.0.1"
+
 react-clientside-effect@^1.2.2:
   version "1.2.2"
   resolved "https://registry.npm.taobao.org/react-clientside-effect/download/react-clientside-effect-1.2.2.tgz#6212fb0e07b204e714581dd51992603d1accc837"
@@ -11929,6 +11942,10 @@ url@^0.11.0:
 use-callback-ref@^1.2.1:
   version "1.2.4"
   resolved "https://registry.npm.taobao.org/use-callback-ref/download/use-callback-ref-1.2.4.tgz?cache=0&sync_timestamp=1591442046890&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fuse-callback-ref%2Fdownload%2Fuse-callback-ref-1.2.4.tgz#d86d1577bfd0b955b6e04aaf5971025f406bea3c"
+
+use-debounce@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.npm.taobao.org/use-debounce/download/use-debounce-5.0.1.tgz#b11861bc63970bfc6fd8393a0a3cc3d7cb5944ce"
 
 use-sidecar@^1.0.1:
   version "1.0.3"

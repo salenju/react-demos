@@ -13,7 +13,7 @@ import CallbackRef02 from './Refs/CallbackRef02'
 import CustomTextInput from './Refs/CustomTextInput'
 import AutoFocusTextInput from './Refs/AutoFocusTextInput'
 
-import Context01 from './Context/Context01'
+import Context01 from './Context'
 
 // React Router
 import App from './router'
@@ -70,6 +70,21 @@ import UploadAndDrag03 from './UploadAndDrag/UploadAndDrag03'
 
 import SideMenu from './SideMenu'
 
+// react-chrono
+import HorizontalBasic from './ReactChrono/HorizontalBasic'
+import VerticalAlternating from './ReactChrono/VerticalAlternating'
+import VerticalAlternatingImg from './ReactChrono/VerticalAlternatingImg'
+import VerticalBasic from './ReactChrono/VerticalBasic'
+import VerticalWithMixedContent from './ReactChrono/VerticalWithMixedContent'
+
+const ReactChrono = {
+  HorizontalBasic,
+  VerticalAlternating,
+  VerticalAlternatingImg,
+  VerticalBasic,
+  VerticalWithMixedContent,
+}
+
 const Example = {
   RowCrollDemo,
   RowCrollDemo01,
@@ -111,6 +126,7 @@ const Example = {
   UploadAndDrag01,
   UploadAndDrag02,
   UploadAndDrag03,
+  ReactChrono,
 }
 
 ReactDOM.render(<App />, document.getElementById('root'))
